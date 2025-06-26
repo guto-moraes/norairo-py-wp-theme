@@ -1,0 +1,84 @@
+body.login {
+    background-color: #212c55;
+    color: white;
+}
+
+#login h1 a {
+    background-image: url("./public/favicon.svg");
+    height: 120px;
+    width: 120px;
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+}
+
+#loginform {
+    background-color: #171f41;
+    border-radius: 10px;
+    border-color: #9ae600;
+}
+
+#user_login,
+#user_pass {
+    color:#e2e8f0;
+    background-color: #212c55;
+    border-color: #9ae600;
+}
+
+#user_login:focus,
+#user_pass:focus,
+#language-switcher #language-switcher-locales {
+    outline-color: #9ae600;
+}
+
+#user_login:placeholder,
+#user_pass:placeholder {
+    color: #f1f2f3;
+}
+
+#wp-submit {
+    color: #171f41;
+    background-color: #9ae600;
+    border-color: #9ae600;
+    transition: all 300ms;
+}
+
+#wp-submit:hover {
+    background-color: #7ccf00;
+    border-color: #7ccf00;
+}
+
+.wp-login-lost-password,
+#backtoblog a,
+.privacy-policy-link {
+    color: #9ae600!important;
+    transition: all 300ms;
+}
+
+.wp-login-lost-password:hover,
+#backtoblog a:hover,
+.privacy-policy-link:hover {
+    color: #e2e8f0!important;
+}
+
+#language-switcher label .dashicons-translation,
+.dashicons-visibility {
+    color: #7ccf00;
+}
+
+#language-switcher #language-switcher-locales {
+    color: white;
+    background-color: #171f41;
+    border-color: #171f41;
+}
+
+#language-switcher .button {
+    color: white;
+    background-color: #5065b9;
+    border-color: #5065b9;
+    transition: all 300ms;
+}
+
+#language-switcher .button:hover {
+    background-color: #171f41;
+    border-color: #171f41;
+}

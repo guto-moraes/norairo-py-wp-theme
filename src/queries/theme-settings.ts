@@ -11,7 +11,7 @@ import type {
   homePageThemeTypes,
 } from "@/types/theme-settings";
 
-const BASE_GRAPHQL_URL = import.meta.env.VITE_BASE_GRAPHQL_URL;
+const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 const fetchHeaderTheme = async () => {
   return await request<headerThemeTypes>(BASE_GRAPHQL_URL, HEADER_THEME);

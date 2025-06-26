@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import request from "graphql-request";
 import { PAGES } from "@/graphql/pages";
 
-const BASE_GRAPHQL_URL = import.meta.env.VITE_BASE_GRAPHQL_URL;
+const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 type pageTypes = {
     page: {

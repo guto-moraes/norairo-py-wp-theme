@@ -6,6 +6,8 @@ import type { memberTypes, socialTypes } from "@/types/team";
 import cn from "@/utils/cn";
 import SocialMediaIcon from "./SocialMediaIcon";
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 const CoordinatorTeam = ({ member }: { member: memberTypes }) => {
   const [copied, setCopied] = useState(false);
 
@@ -23,7 +25,7 @@ const CoordinatorTeam = ({ member }: { member: memberTypes }) => {
   return (
     <>
       <img
-        src={member.featuredImage.node.guid}
+        src={`${BASE_URL}${member.featuredImage.node.filePath}`}
         alt={`Foto de ${member.title}`}
         className="rounded-xl aspect-square object-cover md:h-80 lg:col-span-1 max-w-full"
       />

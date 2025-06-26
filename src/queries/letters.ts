@@ -12,7 +12,7 @@ import type {
   totalLettersTypes,
 } from "@/types/letters";
 
-const BASE_GRAPHQL_URL = import.meta.env.VITE_BASE_GRAPHQL_URL;
+const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 /**
  * Fetch all letters with search query or not

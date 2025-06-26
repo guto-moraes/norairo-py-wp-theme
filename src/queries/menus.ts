@@ -3,7 +3,7 @@ import request from "graphql-request";
 import { FOOTER_MENU, MAIN_MENU } from "@/graphql/menus";
 import type { FooterMenuTypes, MainMenuTypes } from "@/types/menus";
 
-const BASE_GRAPHQL_URL = import.meta.env.VITE_BASE_GRAPHQL_URL;
+const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 const fetchMainMenu = async () => {
   return await request<MainMenuTypes>(BASE_GRAPHQL_URL, MAIN_MENU);

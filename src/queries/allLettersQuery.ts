@@ -3,7 +3,7 @@ import request from "graphql-request";
 import { SEARCH_LETTERS, TOTAL_LETTERS } from "@/graphql/letters";
 import type { AllLettersTypes, totalLettersTypes } from "@/types/letters";
 
-const BASE_GRAPHQL_URL = import.meta.env.VITE_BASE_GRAPHQL_URL;
+const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 const fetchListAndSearchLetters = async (
   per_page: number,

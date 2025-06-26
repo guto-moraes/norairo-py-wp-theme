@@ -3,7 +3,7 @@ import request from "graphql-request";
 import { SINGLE_LETTER } from "@/graphql/letters";
 import type { singleLetterTypes } from "@/types/letters";
 
-const BASE_GRAPHQL_URL = import.meta.env.VITE_BASE_GRAPHQL_URL;
+const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 type LetterTypes = {
   oficio: singleLetterTypes;
