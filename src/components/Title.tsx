@@ -1,4 +1,5 @@
 import cn from "@/utils/cn";
+import { useEffect } from "react";
 
 const Title = ({
   className,
@@ -11,6 +12,18 @@ const Title = ({
   subtitle?: string;
   category?: string;
 }) => {
+  const heading = "Ofícios da Guerra";
+
+  useEffect(() => {
+    if (category) {
+      document.title = `${title} ${category} - ${heading}`;
+    } else if (title) {
+      document.title = `${title} - ${heading}`;
+    } else {
+      document.title = heading;
+    }
+  }, [title, category]);
+
   if (subtitle) {
     return (
       <hgroup className="max-w-full mx-auto mb-8 xl:mb-16">

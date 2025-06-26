@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router";
 import Container from "@/layouts/Container";
-import type { menuItemTypes } from "@/types/menus";
+import type { FooterMenuItemTypes } from "@/types/menus";
 import { useQueryFooterMenu } from "@/queries/menus";
 import { useQueryFooterTheme } from "@/queries/theme-settings";
 
@@ -32,7 +32,7 @@ const Footer = () => {
           <nav className="hidden md:block">
             <ul className="text-sm font-medium uppercase flex justify-center items-center gap-x-4">
               {data &&
-                data.menuItems.nodes.map((item: menuItemTypes) => {
+                data.menuItems.nodes.map((item: FooterMenuItemTypes) => {
                   return (
                     <li key={Math.random()}>
                       <NavLink

@@ -32,6 +32,8 @@ export type homePageThemeTypes = {
       };
       bannerTitle: string;
       bannerDescription: string;
+      presentationTitle: string;
+      presentationText: string;
       titleSectionOne: string;
       subtitleSectionOne: string;
       sectionOneDetails: sectionOneDetails[];

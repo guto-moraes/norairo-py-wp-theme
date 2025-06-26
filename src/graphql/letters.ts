@@ -18,11 +18,13 @@ export const SEARCH_LETTERS = gql`
       nodes {
         id
         databaseId
+        link
         slug
         title(format: RENDERED)
         date
         categories {
           nodes {
+            link
             name
             slug
           }
@@ -56,6 +58,7 @@ export const SINGLE_LETTER = gql`
       title
       categories {
         nodes {
+          link
           name
           slug
         }
@@ -96,11 +99,13 @@ export const LETTERS_BY_CATEGORY = gql`
       nodes {
         id
         databaseId
+        link
         slug
         title(format: RENDERED)
         date
         categories {
           nodes {
+            link
             name
             slug
           }

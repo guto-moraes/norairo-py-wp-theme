@@ -1,41 +1,41 @@
-export type menuItemTypes = {
+export type FooterMenuItemTypes = {
   id: string;
   label: string;
   uri: string;
   parentId: string;
 };
 
-export type menuTypes = {
+export type FooterMenuTypes = {
   menuItems: {
-    nodes: menuItemTypes[];
+    nodes: FooterMenuItemTypes[];
   };
 };
 
-export type subMenuMainMenuTypes = {
+export type SubmenuMainMenuTypes = {
   parentDatabaseId: number;
   databaseId: number;
   label: string;
   uri: string;
 };
 
-export type mainMenuSecondNodeTypes = {
+export type SecondNodeMainMenuTypes = {
   parentDatabaseId: number;
   databaseId: number;
   label: string;
   uri: string;
   childItems: {
-    nodes: subMenuMainMenuTypes[];
+    nodes: SubmenuMainMenuTypes[];
   };
 };
 
-export type mainMenuFirstNodeTypes = {
+export type FirstNodeMainMenuTypes = {
   menuItems: {
-    nodes: mainMenuSecondNodeTypes[];
+    nodes: SecondNodeMainMenuTypes[];
   };
 };
 
-export type mainMenuNew = {
+export type MainMenuTypes = {
   menus: {
-    nodes: mainMenuFirstNodeTypes[];
+    nodes: FirstNodeMainMenuTypes[];
   };
 };

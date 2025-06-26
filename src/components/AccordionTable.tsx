@@ -10,13 +10,11 @@ import { Link } from "react-router";
 
 const AccordionTable = ({
   letters,
-  isCategory,
   isOpen,
   handleShowDescription,
   handleModal,
 }: {
   letters: AllLettersTypes;
-  isCategory?: boolean;
   isOpen: string | null;
   handleShowDescription: (event: React.MouseEvent<HTMLButtonElement>) => void;
   handleModal: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -24,13 +22,6 @@ const AccordionTable = ({
   return (
     <tbody className="max-md:rounded-sm">
       {letters.oficios.nodes.map((item: letterTypes) => {
-        const categoryLink = !isCategory
-          ? `categoria/${item.categories.nodes[0].slug}`
-          : `../oficios/categoria/${item.categories.nodes[0].slug}`;
-
-        const letterLink = !isCategory
-          ? `${item.slug}`
-          : `../oficios/${item.slug}`;
 
         return (
           <Fragment key={item.id}>
@@ -59,7 +50,7 @@ const AccordionTable = ({
               <td className="md:col-span-9 py-1 md:py-2.5 px-2 md:px-0">
                 <div className="flex flex-col gap-1 md:gap-0.5 md:px-2">
                   <Link
-                    to={letterLink}
+                    to={item.link}
                     className={cn(
                       "text-base text-gray-600 hover:text-secondary-400 max-w-full",
                       "transition-colors duration-300 font-bold leading-7 md:flex"
@@ -74,7 +65,7 @@ const AccordionTable = ({
                   <p className="text-xs text-secondary-600 flex items-center gap-x-1">
                     <span className="font-medium">Categoria:</span>{" "}
                     <Link
-                      to={categoryLink}
+                      to={item.categories.nodes[0].link}
                       title={`Ver todos os arquivos da categoria`}
                       className="text-sky-600 hover:text-secondary-400 font-semibold transiton-colors duration-300"
                     >
@@ -101,7 +92,7 @@ const AccordionTable = ({
               >
                 <div className="rounded-b-sm md:rounded-b-none flex justify-center items-center gap-1.5 md:gap-0.5">
                   <Link
-                    to={`./${item.slug}`}
+                    to={item.link}
                     className={cn(
                       "relative group/view rounded-full hover:bg-primary-200",
                       "md:hover:bg-secondary-200/55 size-7 grid place-content-center",

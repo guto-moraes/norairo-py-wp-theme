@@ -32,7 +32,7 @@ const Modal = ({ isModal, letterURL, setIsModal }: Modal) => {
         isModal ? "scale-100" : "scale-0"
       )}
     >
-      <div className="rounded-2xl bg-white h-[650px] w-[900px] relative">
+      <div className="rounded-2xl bg-white h-auto max-lg:mx-auto lg:h-[650px] w-full lg:w-[900px] max-w-[90%] relative">
         <Button
           title="Fechar"
           className={cn(

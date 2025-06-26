@@ -32,6 +32,8 @@ export const HOME_THEME = gql`
         }
         bannerTitle
         bannerDescription
+        presentationTitle
+        presentationText
         titleSectionOne
         subtitleSectionOne
         sectionOneDetails {

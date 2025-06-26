@@ -1,12 +1,13 @@
 export type letterTypes = {
   id: string;
   databaseId: number;
-  slug: string;
+  link: string;
   title: string;
   date: string;
   categories: {
     nodes: [
       {
+        link: string;
         name: string;
         slug: string;
       }
@@ -71,6 +72,7 @@ export type singleLetterTypes = {
   categories: {
     nodes: [
       {
+        link: string;
         name: string;
         slug: string;
       }

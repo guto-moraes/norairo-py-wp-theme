@@ -27,6 +27,7 @@ export default defineConfig({
     manifest: true, // Generate manifest.json file (for caching)
     emptyOutDir: true, // Empty the dist folder before building
     outDir: BUILD_DIR,
+    chunkSizeWarningLimit: 525,
     rollupOptions: {
       input: JS_FILE,
       output: {
