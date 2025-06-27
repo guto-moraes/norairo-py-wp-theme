@@ -16,7 +16,7 @@ const BlogArticle = () => {
   if (isError) return <Errors message={error.message} />;
 
   return (
-    <Main className="py-10 xl:py-16">
+    <Main className="py-10 xl:py-16 dark:bg-primary-900 h-full">
       <Container className="w-full max-w-screen xl:max-w-5xl">
         {data && (
           <>

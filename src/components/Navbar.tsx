@@ -47,7 +47,7 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
     };
   }, [open]);
 
-  // close submenu on click outside
+  // Close submenu on click outside
   useEffect(() => {
     const clickHandler = (event: Event) => {
       const target = event.target as Node;
@@ -63,6 +63,21 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
     document.addEventListener("click", clickHandler);
     return () => document.removeEventListener("click", clickHandler);
   });
+
+  // If submenu or mobile menu is open, close them after 750ms
+  useEffect(() => {
+    if (open) {
+      setTimeout(() => {
+        setOpen(false);
+      }, 3000);
+    }
+
+    if (showMenu) {
+      setTimeout(() => {
+        setShowMenu(false);
+      }, 3500);
+    }
+  }, [open, showMenu]);
 
   return (
     <nav className="w-full max-w-screen h-full flex justify-between items-center">
@@ -94,8 +109,11 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
                       <Button
                         ref={trigger}
                         className={cn(
-                          "text-white hover:text-lime-400 font-semibold group/submenu uppercase",
-                          "md:text-primary-600 md:hover:text-secondary-600 p-0 flex items-center gap-0.5"
+                          "text-white hover:text-lime-400 group/submenu uppercase font-semibold",
+                          "md:hover:text-secondary-600 p-0 flex items-center gap-0.5",
+                          open
+                            ? "md:text-rose-500 dark:md:text-lime-400"
+                            : "md:text-primary-600 dark:md:text-white"
                         )}
                         title={subitem.label}
                         data-open={String(open)}
@@ -107,7 +125,7 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
                       <ul
                         ref={dropdown}
                         className={cn(
-                          "bg-primary-800 md:bg-white/95 md:shadow-lg md:rounded-b-md w-full",
+                          "bg-primary-800 md:bg-white/95 dark:bg-primary-950 md:shadow-lg md:rounded-b-md w-full",
                           "transition-transform duration-300 md:absolute md:top-12 md:right-0 space-y-4",
                           "origin-top-left md:origin-top-right transform-gpu min-w-64 md:min-w-max",
                           open
@@ -119,10 +137,15 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
                           (submenu: SubmenuMainMenuTypes) => (
                             <li key={submenu.databaseId}>
                               <NavLink
-                                className={cn(
-                                  "text-sm text-white hover:text-lime-400 md:text-primary-600",
-                                  "md:hover:text-secondary-600 font-semibold uppercase"
-                                )}
+                                className={({ isActive }) => {
+                                  return cn(
+                                    "text-sm text-white hover:text-lime-400 font-semibold",
+                                    "md:hover:text-secondary-600 font-semibold uppercase",
+                                    isActive
+                                      ? "md:text-rose-500 dark:md:text-lime-400"
+                                      : "md:text-primary-600 dark:md:text-white"
+                                  );
+                                }}
                                 to={submenu.uri}
                                 title={submenu.label}
                               >
@@ -138,10 +161,15 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
                   return (
                     <li key={subitem.databaseId}>
                       <NavLink
-                        className={cn(
-                          "text-white hover:text-lime-400 font-semibold uppercase md:text-primary-600",
-                          "md:hover:text-secondary-600 transition-colors duration-300"
-                        )}
+                        className={({ isActive }) => {
+                          return cn(
+                            "text-white hover:text-lime-400 uppercase font-semibold",
+                            "md:hover:text-secondary-600 transition-colors duration-300",
+                            isActive
+                              ? "md:text-rose-500 dark:md:text-lime-400"
+                              : "md:text-primary-600 dark:md:text-white"
+                          );
+                        }}
                         to={subitem.uri}
                         title={subitem.label}
                       >
@@ -156,9 +184,9 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
       </ul>
       <Button title="Abri Menu" className="md:hidden" onClick={handleShowMenu}>
         {showMenu ? (
-          <Icons.Close className="size-7 fill-secondary-800" />
+          <Icons.Close className="size-7 fill-secondary-800 dark:fill-lime-400" />
         ) : (
-          <Icons.MenuHamburger className="size-7 fill-secondary-800" />
+          <Icons.MenuHamburger className="size-7 fill-secondary-800 dark:fill-lime-400" />
         )}
       </Button>
     </nav>

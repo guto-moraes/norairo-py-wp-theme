@@ -14,8 +14,10 @@ import Lattes from "./Lattes";
 import Loading from "./Loading";
 import Mail from "./Mail";
 import MenuHamburger from "./MenuHamburger";
+import Moon from "./Moon";
 import PDFFile from "./PDFFile";
 import Settings from "./Settings";
+import Sun from "./Sun";
 
 export const Icons = {
   ArrowLongRight,
@@ -34,6 +36,8 @@ export const Icons = {
   Loading,
   Mail,
   MenuHamburger,
+  Moon,
   PDFFile,
-  Settings
+  Settings,
+  Sun
 };

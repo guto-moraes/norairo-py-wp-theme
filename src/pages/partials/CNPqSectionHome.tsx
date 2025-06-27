@@ -1,10 +1,11 @@
 import { Link } from "react-router";
 import Container from "@/layouts/Container";
+import cn from "@/utils/cn";
 
 const CNPqSectionHome = ({ cnpq }: { cnpq: string; }) => {
 
   return (
-    <section className="bg-secondary-200/20 py-8 sm:py-16 xl:py-24 w-full">
+    <section className="bg-secondary-200/20 dark:bg-primary-950 py-8 sm:py-16 xl:py-24 w-full">
       <Container className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         <figure className="w-max mx-auto order-2 sm:order-1">
           <Link
@@ -19,7 +20,10 @@ const CNPqSectionHome = ({ cnpq }: { cnpq: string; }) => {
             />
           </Link>
         </figure>
-        <p className="my-auto text-base sm:text-lg lg:text-xl text-secondary-700 font-medium text-balance sm:order-2">
+        <p className={cn(
+          "my-auto text-base sm:text-lg lg:text-xl text-secondary-700",
+          "dark:text-white font-medium text-balance sm:order-2"
+        )}>
           A realização deste projeto foi possível graças ao apoio financeiro
           recebido do{" "}
           <Link

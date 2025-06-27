@@ -27,14 +27,16 @@ const AccordionTable = ({
           <Fragment key={item.id}>
             <tr
               className={cn(
-                "grid grid-rows-auto md:grid-cols-12 gap-2 md:gap-1 md:divide-x max-md:shadow-md",
+                "grid grid-rows-auto md:grid-cols-12 gap-2 md:gap-1 md:divide-x",
+                "max-md:shadow-md max-md:rounded-sm max-md:mb-4",
                 "md:divide-secondary-200/75 md:border-b md:border-secondary-200/30",
-                "md:nth-[2n-1]:bg-secondary-200/15 max-md:rounded-sm max-md:mb-4"
+                "md:nth-[2n-1]:bg-secondary-200/15 dark:md:nth-[2n-1]:bg-slate-950/35"
               )}
             >
               <td
                 className={cn(
-                  "md:col-span-1 rounded-t-md md:rounded-none bg-secondary-500 md:bg-transparent",
+                  "md:col-span-1 rounded-t-md md:rounded-none bg-secondary-500",
+                  "max-md:dark:bg-slate-950 md:bg-transparent",
                   "py-1 md:py-2.5 px-2 md:px-0 md:grid md:place-content-center"
                 )}
               >
@@ -42,7 +44,7 @@ const AccordionTable = ({
                   <span className="md:hidden text-sm text-white font-bold uppercase">
                     Ano:
                   </span>
-                  <span className="text-sm text-white md:text-primary-600 font-bold">
+                  <span className="text-sm text-white md:text-primary-600 dark:text-white font-bold">
                     {letterCreatedAt(item.details.originalfilecreatedat)}
                   </span>
                 </div>
@@ -52,22 +54,27 @@ const AccordionTable = ({
                   <Link
                     to={item.link}
                     className={cn(
-                      "text-base text-gray-600 hover:text-secondary-400 max-w-full",
+                      "text-base text-gray-600 dark:text-white hover:text-secondary-400 max-w-full",
                       "transition-colors duration-300 font-bold leading-7 md:flex"
                     )}
                     title={item.title}
                   >
-                    <Icons.PDFFile className="size-5 fill-red-600 mr-1 mb-1 hidden md:inline-block" />
+                    <Icons.PDFFile 
+                      className="size-5 min-w-6 fill-red-600 dark:fill-red-500 mr-1 mb-1 hidden md:inline-block" 
+                    />
                     <p className="max-md:line-clamp-3 md:truncate leading-5">
                       {item.title}
                     </p>
                   </Link>
-                  <p className="text-xs text-secondary-600 flex items-center gap-x-1">
+                  <p className="text-xs text-secondary-600 dark:text-secondary-400 flex items-center gap-x-1">
                     <span className="font-medium">Categoria:</span>{" "}
                     <Link
                       to={item.categories.nodes[0].link}
                       title={`Ver todos os arquivos da categoria`}
-                      className="text-sky-600 hover:text-secondary-400 font-semibold transiton-colors duration-300"
+                      className={cn(
+                        "text-sky-600 dark:text-sky-400 hover:text-secondary-400",
+                        "font-semibold transiton-colors duration-300"
+                      )}
                     >
                       {item.categories.nodes[0].name}
                     </Link>{" "}
@@ -86,7 +93,8 @@ const AccordionTable = ({
               </td>
               <td
                 className={cn(
-                  "md:col-span-2 rounded-b-sm md:rounded-b-none bg-secondary-500 md:bg-transparent",
+                  "md:col-span-2 rounded-b-sm md:rounded-b-none bg-secondary-500",
+                  "max-md:dark:bg-slate-950 md:bg-transparent",
                   "py-1 md:py-2.5 px-2 md:px-0 grid place-content-center"
                 )}
               >
@@ -94,12 +102,17 @@ const AccordionTable = ({
                   <Link
                     to={item.link}
                     className={cn(
-                      "relative group/view rounded-full hover:bg-primary-200",
+                      "relative group/view rounded-full hover:bg-primary-200 dark:hover:bg-lime-400",
                       "md:hover:bg-secondary-200/55 size-7 grid place-content-center",
-                      "bg-secondary-300/50 md:bg-transparent"
+                      "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
-                    <Icons.FileText className="size-5 fill-white md:fill-primary-500 pointer-events-none" />
+                    <Icons.FileText 
+                      className={cn(
+                        "size-5 fill-white dark:fill-lime-400 md:fill-primary-500",
+                        "dark:group-hover/view:fill-primary-950 pointer-events-none"
+                      )} 
+                    />
                     <Tooltip
                       text="Acessar este Ofício"
                       className="-top-5 py-1 group-hover/view:visible group-hover/view:scale-100"
@@ -113,12 +126,17 @@ const AccordionTable = ({
                     data-open={String(item.id)}
                     onClick={handleModal}
                     className={cn(
-                      "relative group/modal rounded-full hover:bg-primary-200",
+                      "relative group/modal rounded-full hover:bg-primary-200 dark:hover:bg-lime-400",
                       "md:hover:bg-secondary-200/55 size-7 grid place-content-center",
-                      "bg-secondary-300/50 md:bg-transparent"
+                      "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
-                    <Icons.Eye className="size-5 fill-white md:fill-primary-500 pointer-events-none" />
+                    <Icons.Eye 
+                      className={cn(
+                        "size-5 fill-white dark:fill-lime-400 md:fill-primary-500",
+                        "dark:group-hover/modal:fill-primary-950 pointer-events-none"
+                      )} 
+                    />
                     <Tooltip
                       text="Pré-visualizar ofício"
                       className="-top-5 py-1 group-hover/modal:visible group-hover/modal:scale-100"
@@ -130,12 +148,17 @@ const AccordionTable = ({
                     download
                     target="_blank"
                     className={cn(
-                      "relative group/download rounded-full hover:bg-primary-200",
+                      "relative group/download rounded-full hover:bg-primary-200 dark:hover:bg-lime-400",
                       "md:hover:bg-secondary-200/55 size-7 grid place-content-center",
-                      "bg-secondary-300/50 md:bg-transparent"
+                      "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
-                    <Icons.Download className="size-5 fill-white md:fill-primary-500 pointer-events-none" />
+                    <Icons.Download
+                      className={cn(
+                        "size-5 fill-white dark:fill-lime-400 md:fill-primary-500",
+                        "dark:group-hover/download:fill-primary-950 pointer-events-none"
+                      )}                     
+                    />
                     <Tooltip
                       text="Baixar este ofício"
                       className="-top-5 py-1 group-hover/download:visible group-hover/download:scale-100"
@@ -146,19 +169,19 @@ const AccordionTable = ({
                     onClick={handleShowDescription}
                     className={cn(
                       "rounded-full hover:bg-primary-200 md:hover:bg-secondary-200/55 size-7 grid",
-                      "relative group/show place-content-center group/show",
+                      "dark:hover:bg-lime-400 relative group/show place-content-center group/show",
                       isOpen === item.id
-                        ? "bg-secondary-600 md:bg-primary-400"
-                        : "bg-secondary-300/50 md:bg-transparent"
+                        ? "bg-secondary-600 md:bg-primary-400 dark:bg-lime-400"
+                        : "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
                     <Icons.ChevronDown
                       className={cn(
-                        "size-5 transition-transform duration-300",
-                        "group-hover/show:fill-secondary-600 pointer-events-none",
+                        "size-5 transition-transform duration-300 group-hover/show:fill-secondary-600",
+                        "dark:group-hover/show:fill-primary-950 pointer-events-none",
                         isOpen === item.id
-                          ? "fill-white rotate-180"
-                          : "fill-white md:fill-primary-500 rotate-0"
+                          ? "fill-white dark:fill-primary-950 rotate-180"
+                          : "fill-white md:fill-primary-500 dark:fill-lime-400 rotate-0"
                       )}
                     />
                     <Tooltip
@@ -179,13 +202,13 @@ const AccordionTable = ({
                 colSpan={3}
                 className="md:py-4 rounded-b-sm md:rounded-b-none"
               >
-                <h3 className="text-base lg:text-lg xl:text-xl text-primary-600 font-bold leading-5 md:mb-2">
+                <h3 className="text-base lg:text-lg text-primary-600 dark:text-lime-400 font-bold leading-5 md:mb-2">
                   {item.title}
                 </h3>
                 <p
                   className={cn(
-                    "max-md:rounded-sm max-md:bg-secondary-200/50 text-sm font-medium",
-                    "text-gray-700 max-md:p-2 max-md:mt-2 max-md:mb-4",
+                    "max-md:rounded-sm max-md:bg-secondary-200/50 dark:bg-slate-800 text-sm",
+                    "text-gray-700 dark:text-white font-medium max-md:p-2 max-md:mt-2 max-md:mb-4",
                     "[&_p:not(:last-of-type)]:mb-4 text-justify hyphens-auto"
                   )}
                   dangerouslySetInnerHTML={{

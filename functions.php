@@ -140,17 +140,17 @@ add_action('admin_head', 'fix_svg');
 /**
  * Login logo customize
  */
-function og_custom_login_page(){
-	wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/style-custom-login-page.css' );
-}
-add_action("login_enqueue_scripts", "og_custom_login_page");
+// function og_custom_login_page(){
+// 	wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/style-custom-login-page.css' );
+// }
+// add_action("login_enqueue_scripts", "og_custom_login_page");
 
-function og_login_logo_url() {
-    return home_url();
-}
-add_filter( "login_headerurl", "og_login_logo_url" );
+// function og_login_logo_url() {
+//     return home_url();
+// }
+// add_filter( "login_headerurl", "og_login_logo_url" );
 
-function og_login_logo_url_title() {
-    return "Ofícios da Guerra | Transcrição de documentos da Guerra da Tríplice Aliança contra o Paraguai";
-}
-add_filter( "login_headertext", "og_login_logo_url_title" );
+// function og_login_logo_url_title() {
+//     return "Ofícios da Guerra | Transcrição de documentos da Guerra da Tríplice Aliança contra o Paraguai";
+// }
+// add_filter( "login_headertext", "og_login_logo_url_title" );

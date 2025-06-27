@@ -17,7 +17,7 @@ import cn from "@/utils/cn";
 
 const MAX_ITEMS = 5;
 const MAX_LEFT = (MAX_ITEMS - 1) / 2;
-const LIMIT = 2; // Number of letters to fetch per request
+const LIMIT = 12; // Number of letters to fetch per request
 
 const Letters = () => {
   const [isOpen, setIsOpen] = useState<string | null>(null);
@@ -72,18 +72,20 @@ const Letters = () => {
 
   return (
     <>
-      <Main className="py-10 xl:py-16">
+      <Main className="py-10 xl:py-16 dark:bg-primary-900 h-full">
         <Container>
           <Title title="Lista de Ofícios" className="uppercase" />
 
-          <div className="rounded-xs bg-secondary-200/40 shadow-inner p-1.5 mb-5 w-full h-14 flex gap-3">
+          <div className="rounded-xs bg-secondary-200/40 dark:bg-slate-900 shadow-inner p-1.5 mb-5 w-full h-14 flex gap-3">
             <input
               type="search"
               name="query"
               placeholder="Digite um termo ou um ano para pesquisar"
               className={cn(
-                "rounded-xs bg-white text-secondary-700 px-2 w-full h-full focus:outline-2 outline-primary-500 peer",
-                "placeholder:text-base placeholder:text-secondary-600 placeholder:font-medium border-0",
+                "rounded-xs bg-white dark:bg-slate-800 px-2 w-full h-full focus:outline-2",
+                "outline-primary-500 dark:outline-lime-500 peer text-secondary-700",
+                "dark:text-secondary-200 placeholder:text-base placeholder:text-secondary-600",
+                "dark:placeholder:text-secondary-400 placeholder:font-medium border-0",
                 "focus:outline-priamry-500"
               )}
               autoFocus
@@ -96,7 +98,9 @@ const Letters = () => {
                 "bg-primary-500 hover:bg-primary-600 text-white border-1 border-primary-500",
                 "hover:border-primary-600 peer-focus:outline-2 peer-focus:outline-primary-500",
                 "peer-focus:border-primary-500 focus:outline-2 focus:outline-primary-600",
-                "font-bold transition-colors duration-300 rounded-xs grid place-content-center"
+                "font-bold transition-colors duration-300 rounded-xs grid place-content-center dark:text-primary-950",
+                "dark:bg-lime-400 dark:hover:bg-lime-600 dark:border-lime-400 dark:hover:border-lime-600",
+                "dark:peer-focus:outline-lime-400 dark:peer-focus:border-lime-400 dark:focus:outline-lime-600"
               )}
               onClick={handleSubmitSearchQuery}
             >
@@ -104,13 +108,13 @@ const Letters = () => {
             </Button>
           </div>
           {data && pages >= 1 ? (
-            <section className="rounded-md shadow-md bg-white p-4">
+            <section className="rounded-md shadow-md bg-white dark:bg-slate-800 p-4">
               <table className="rounded-sm w-full">
                 <thead className="hidden md:block">
                   <tr
                     className={cn(
-                      "rounded-t-sm bg-secondary-500 divide-x divide-white",
-                      "text-white uppercase grid grid-cols-12 gap-1"
+                      "rounded-t-sm bg-secondary-500 dark:bg-slate-950 divide-x divide-white",
+                      "dark:opacity-50 text-white uppercase grid grid-cols-12 gap-1"
                     )}
                   >
                     <th className="col-span-1 py-1">Ano</th>
@@ -127,11 +131,11 @@ const Letters = () => {
               </table>
             </section>
           ) : (
-            <Alert className="border-lime-600">
-              <TriangleAlert className="text-lime-600" size={32} />{" "}
-              <p className="text-secondary-800">
+            <Alert className="border-lime-600 dark:border-yellow-300">
+              <TriangleAlert className="text-lime-600 dark:text-yellow-300" size={32} />{" "}
+              <p className="text-secondary-800 dark:text-white">
                 Infelizmente não encontramos nenhum ofício contendo o termo{" "}
-                <strong className="text-primary-600 font-bold uppercase">
+                <strong className="text-primary-600 dark:text-yellow-300 font-bold uppercase">
                   {searchQuery}
                 </strong>
               </p>

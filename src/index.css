@@ -29,4 +29,7 @@
   --color-secondary-800: oklch(35.24% 0.015 248.26);
   --color-secondary-900: oklch(24.06% 0.012 248.32);
   --color-secondary-950: oklch(18.83% 0.009 240.4);
+  --color-lattes-50: oklch(94.42% 0.03 238.83);
+  --color-lattes-500: oklch(45.53% 0.126 249.19);
+  --color-lattes-600: oklch(38.92% 0.106 248.4);  
 }

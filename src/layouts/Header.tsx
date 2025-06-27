@@ -1,29 +1,26 @@
-// import { useState } from "react";
-// import { NavLink } from "react-router";
-// import { useQueryHeaderTheme } from "@/queries/theme-settings";
-// import Button from "@/components/Button";
-// import { Icons } from "@/components/icons";
-// import Navigation from "@/components/Navigation";
 import Navbar from "@/components/Navbar";
 import Container from "./Container";
 import { useQueryMainMenu } from "@/queries/menus";
 import { useQueryHeaderTheme } from "@/queries/theme-settings";
+import useThemeMode from "@/hooks/useThemeMode";
 
 const Header = () => {
-  // const [showMenu, setShowMenu] = useState(false);
+  const [theme] = useThemeMode();
   const { data } = useQueryMainMenu();
   const { data: logoData } = useQueryHeaderTheme();
 
-  // const handleShowMenu = () => {
-  //   setShowMenu(!showMenu);
-  // }
-
-  const logoLink = logoData?.norairoTheme.norairoThemeSettings.logo.node.guid
-
+  const logoLink = logoData?.norairoTheme.norairoThemeSettings.logo.node.guid;
+  const darkLogoLink =
+    logoData?.norairoTheme.norairoThemeSettings.darkLogo.node.guid;
   return (
-    <header className="shadow-md bg-white/85 h-20 w-full max-w-screen">
+    <header className="shadow-md bg-white/85 dark:bg-slate-950 h-20 w-full max-w-screen">
       <Container className="h-full">
-        {data && <Navbar logo={logoLink} dataItems={data} />}
+        {data && (
+          <Navbar
+            logo={theme === "light" ? logoLink : darkLogoLink}
+            dataItems={data}
+          />
+        )}
       </Container>
     </header>
   );

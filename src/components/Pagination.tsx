@@ -33,8 +33,9 @@ const Pagination = ({
         <li>
           <Button
             className={cn(
-              "rounded-xs bg-secondary-500 hover:bg-primary-500 py-1",
-              "text-white text-xs font-medium transition-colors duration-300"
+              "rounded-xs bg-secondary-500 dark:bg-lime-500 hover:bg-primary-500",
+              "dark:hover:bg-secondary-500 py-1 text-white dark:text-primary-950",
+              "text-xs font-medium transition-colors duration-300"
             )}
             onClick={() => handlePagination(currentPage - 1)}
           >
@@ -48,9 +49,10 @@ const Pagination = ({
           <li key={page}>
             <Button
               className={cn(
-                "rounded-xs bg-secondary-500 hover:bg-primary-500 py-1 text-white",
-                "text-xs font-medium w-7 transition-colors duration-300 disabled:cursor-not-allowed",
-                "disabled:bg-secondary-100 disabled:text-secondary-700"
+                "rounded-xs bg-secondary-500 dark:bg-lime-300 hover:bg-primary-500 dark:hover:bg-lime-500",
+                "py-1 text-white dark:text-slate-900 text-xs dark:disabled:bg-secondary-700",
+                "dark:disabled:text-white transition-colors duration-300 disabled:cursor-not-allowed",
+                "disabled:bg-secondary-100 disabled:text-secondary-700 font-medium w-7"
               )}
               disabled={page === currentPage ? true : false}
               onClick={() => handlePagination(page)}
@@ -63,8 +65,9 @@ const Pagination = ({
         <li>
           <Button
             className={cn(
-              "rounded-xs bg-secondary-500 hover:bg-primary-500 py-1",
-              "text-white text-xs font-medium transition-colors duration-300"
+              "rounded-xs bg-secondary-500 dark:bg-lime-500 hover:bg-primary-500",
+              "dark:hover:bg-secondary-500 py-1 text-white dark:text-primary-950",
+              "text-xs font-medium transition-colors duration-300"
             )}
             onClick={() => handlePagination(currentPage + 1)}
           >

@@ -30,11 +30,14 @@ const CoordinatorTeam = ({ member }: { member: memberTypes }) => {
         className="rounded-xl aspect-square object-cover md:h-80 lg:col-span-1 max-w-full"
       />
       <div className="relative flex flex-col gap-4 md:max-h-80 md:overflow-y-auto lg:col-span-2 xl:col-span-3">
-        <h2 className="text-xl text-primary-600 font-bold leading-5 xl:leading-6 mt-4 xl:mt-0">
+        <h2 className="text-xl text-primary-600 dark:text-lime-400 font-bold leading-5 xl:leading-6 mt-4 xl:mt-0">
           {member.title}
         </h2>
         <div
-          className="[&_p:not(:last-of-type)]:mb-6 text-sm lg:text-base text-secondary-800 text-justify hyphens-auto"
+          className={cn(
+            "[&_p:not(:last-of-type)]:mb-6 text-sm lg:text-base text-justify",
+            "text-secondary-800 dark:text-white hyphens-auto"
+          )}
           dangerouslySetInnerHTML={{ __html: member.content }}
         />
 
@@ -48,8 +51,8 @@ const CoordinatorTeam = ({ member }: { member: memberTypes }) => {
             >
               <Icons.Mail
                 className={cn(
-                  "size-7 fill-secondary-700 group-hover:fill-sky-600 scale-100",
-                  "group-hover:scale-115 transiton-all duration-300 pointer-events-none"
+                  "size-7 fill-secondary-700 dark:fill-white group-hover:fill-sky-600",
+                  "scale-100 group-hover:scale-115 transiton-all duration-300 pointer-events-none"
                 )}
               />
               <span

@@ -7,7 +7,7 @@ const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 type pageTypes = {
     page: {
         title: string;
-        content: string;
+        content?: string;
     }
 }
 

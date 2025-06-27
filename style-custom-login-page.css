@@ -17,6 +17,15 @@ body.login {
     border-color: #9ae600;
 }
 
+.login .notice {
+    background-color: #171f41;
+    border-color: #9ae600;
+}
+
+.login .notice p {
+    color: white
+}
+
 #user_login,
 #user_pass {
     color:#e2e8f0;
