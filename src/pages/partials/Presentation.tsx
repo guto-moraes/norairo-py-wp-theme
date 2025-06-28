@@ -12,7 +12,7 @@ const Presentation = ({ title, text }: IPresentation) => {
       <Container>
         <h2 className={cn(
           "text-2xl sm:text-3xl lg:text-4xl text-primary-600",
-          "dark:text-sky-500 dark:text-amber-300 text-center font-black uppercase mb-8"
+          "dark:text-amber-300 text-center font-black uppercase mb-8"
         )}>
           {title}
         </h2>

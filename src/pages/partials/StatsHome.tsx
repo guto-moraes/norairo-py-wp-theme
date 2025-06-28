@@ -20,7 +20,7 @@ const StatsHome = ({ stats }: StatsHomeProps) => {
         <div className="w-full">
           <h2 className={cn(
             "mb-2 text-center text-2xl sm:text-3xl lg:text-4xl",
-            "text-primary-600 dark:text-sky-500 dark:text-primary-300 font-bold uppercase"
+            "text-primary-600 dark:text-primary-300 font-bold uppercase"
           )}>
             {stats?.norairoTheme.norairoThemeSettings.titleSectionOne}
           </h2>
