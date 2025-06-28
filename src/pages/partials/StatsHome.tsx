@@ -15,12 +15,12 @@ const StatsHome = ({ stats }: StatsHomeProps) => {
   const { data: totalData } = useAllLetters();
 
   return (
-    <section className="py-8 md:py-16 xl:py-24 w-full max-w-screen bg-white dark:bg-primary-950">
+    <section className="py-8 md:py-16 xl:py-24 w-full max-w-screen bg-white dark:bg-[#1c1e26]">
       <Container className="flex flex-col gap-6 justify-center items-center">
         <div className="w-full">
           <h2 className={cn(
             "mb-2 text-center text-2xl sm:text-3xl lg:text-4xl",
-            "text-primary-600 dark:text-sky-500 font-bold uppercase"
+            "text-primary-600 dark:text-sky-500 dark:text-primary-300 font-bold uppercase"
           )}>
             {stats?.norairoTheme.norairoThemeSettings.titleSectionOne}
           </h2>

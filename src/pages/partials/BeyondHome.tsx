@@ -8,15 +8,18 @@ type BeyondHomeProps = {
 
 const BeyondHome = ({ beyond }: BeyondHomeProps) => {
   return (
-    <section className="py-8 sm:py-16 xl:py-24 w-full dark:bg-slate-950/50">
+    <section className="py-8 sm:py-16 xl:py-24 w-full">
       <Container className="grid grid-cols-6 gap-8">
         <div className="col-span-6 sm:col-span-3 w-full flex flex-col gap-4 sm:my-auto">
-          <h2 className="text-3xl md:text-4xl text-primary-600 dark:text-sky-500 text-center sm:text-left font-bold uppercase">
+          <h2 className={cn(
+            "text-3xl md:text-4xl text-primary-600 dark:text-primary-300",
+            "text-center sm:text-left font-bold uppercase"
+          )}>
             {beyond?.norairoTheme.norairoThemeSettings.titleSectionTwo}
           </h2>
           <p
             className={cn(
-              "text-md lg:text-lg sm:text-xl text-secondary-700 dark:text-white font-medium",
+              "text-md lg:text-lg sm:text-xl text-secondary-700 dark:text-white/75 font-medium",
               "&_strong]:text-primary-500 text-balance [&_strong]:font-extrabold"
             )}
             dangerouslySetInnerHTML={{

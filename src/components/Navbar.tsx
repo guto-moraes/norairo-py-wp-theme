@@ -84,7 +84,7 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
       {children}
       <ul
         className={cn(
-          "max-md:bg-primary-700 dark:max-md:bg-primary-800 py-3 px-6 md:px-0",
+          "max-md:bg-[#0B0C14] dark:max-md:bg-[#0B0C14]/90 py-3 px-6 md:px-0",
           "flex flex-col gap-3.5 md:flex-row justify-start md:justify-end items-start md:items-center",
           "md:gap-4 max-md:z-30 max-md:h-screen w-full max-w-72 min-w-max max-md:absolute",
           "max-md:top-20 max-md:right-0 max-md:pt-6 transition-transform duration-300",
@@ -101,10 +101,10 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
                       <Button
                         ref={trigger}
                         className={cn(
-                          "text-white hover:text-lime-400 group/submenu uppercase font-semibold",
+                          "text-white hover:text-amber-300/75 group/submenu uppercase font-semibold",
                           "md:hover:text-secondary-600 p-0 flex items-center gap-0.5",
                           open
-                            ? "md:text-rose-500 dark:md:text-lime-400"
+                            ? "md:text-rose-500 dark:md:text-amber-300/75"
                             : "md:text-primary-600 dark:md:text-white"
                         )}
                         title={subitem.label}
@@ -117,11 +117,11 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
                       <ul
                         ref={dropdown}
                         className={cn(
-                          "bg-primary-800 md:bg-white/95 dark:bg-primary-950 md:shadow-lg md:rounded-b-md w-full",
+                          "bg-primary-800 md:bg-white/95 dark:bg-[#1c1e26] md:shadow-lg md:rounded-b-md w-full",
                           "transition-transform duration-300 md:absolute md:top-12 md:right-0 space-y-4",
                           "origin-top-left md:origin-top-right transform-gpu min-w-64 md:min-w-max",
                           open
-                            ? "scale-100 p-4 mt-4 md:mt-0 mb-1.5 lg:mb-0 max-h-screen lg:max-h-max"
+                            ? "scale-100 p-4 mt-4 md:mt-1 mb-1.5 lg:mb-0 max-h-screen lg:max-h-max"
                             : "scale-0 max-h-0"
                         )}
                       >
@@ -131,10 +131,10 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
                               <NavLink
                                 className={({ isActive }) => {
                                   return cn(
-                                    "text-sm text-white hover:text-lime-400 font-semibold",
+                                    "text-sm text-white hover:text-amber-300/75 font-semibold",
                                     "md:hover:text-secondary-600 font-semibold uppercase",
                                     isActive
-                                      ? "md:text-rose-500 dark:md:text-lime-400"
+                                      ? "md:text-rose-500 dark:md:text-amber-300/75"
                                       : "md:text-primary-600 dark:md:text-white"
                                   );
                                 }}
@@ -155,10 +155,10 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
                       <NavLink
                         className={({ isActive }) => {
                           return cn(
-                            "text-white hover:text-lime-400 uppercase font-semibold",
+                            "text-white hover:text-amber-300/75 uppercase font-semibold",
                             "md:hover:text-secondary-600 transition-colors duration-300",
                             isActive
-                              ? "md:text-rose-500 dark:md:text-lime-400"
+                              ? "md:text-rose-500 dark:md:text-amber-300/75"
                               : "md:text-primary-600 dark:md:text-white"
                           );
                         }}

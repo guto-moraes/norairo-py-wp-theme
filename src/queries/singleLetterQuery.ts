@@ -19,6 +19,6 @@ export const useSingleLetter = (id: string) => {
   return useQuery<LetterTypes>({
     queryKey: ["single-letter", id],
     queryFn: () => fetchSingleLetter(id),
-    staleTime: 60 * 5 * 1000,
+    staleTime: 60 * 5 * 1000
   });
 };

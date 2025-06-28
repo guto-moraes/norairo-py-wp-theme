@@ -28,6 +28,7 @@ const App = () => {
         <Route path=":slug"  element={<BlogArticle />} />
       </Route>
       <Route path="contato" element={<Contact />} />
+      <Route path="404" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

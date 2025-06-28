@@ -5,7 +5,7 @@ const DataLoading = () => {
   return (
     <Container className="py-10 xl:py-16 h-full w-full grid place-content-center">
       <div className="flex flex-col justify-center items-center gap-y-4">
-        <Icons.Loading className="mr-3 -ml-1 size-12 animate-spin text-tertiary-500 dark:text-lime-400" />
+        <Icons.Loading className="mr-3 -ml-1 size-12 animate-spin text-tertiary-500 dark:text-amber-300/75" />
         <span className="text-xl text-primary-800 dark:text-white font-semibold">
           Carregando...
         </span>

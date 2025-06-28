@@ -73,7 +73,7 @@ const LettersByCategory = () => {
 
   return (
     <>
-      <Main className="py-10 xl:py-16 dark:bg-primary-900 h-full">
+      <Main className="py-10 xl:py-16 h-full">
         <Container>
           {data && (
             <Title
@@ -82,16 +82,16 @@ const LettersByCategory = () => {
               className="uppercase"
             />
           )}
-          <div className="rounded-xs bg-secondary-200/40 dark:bg-slate-900 shadow-inner p-1.5 mb-5 w-full h-14 flex gap-3">
+          <div className="rounded-xs bg-secondary-200/40 dark:bg-[#1c1e26] shadow-inner p-1.5 mb-5 w-full h-14 flex gap-3">
             <input
               type="search"
               name="query"
               placeholder="Digite um termo ou um ano para pesquisar"
               className={cn(
-                "rounded-xs bg-white dark:bg-slate-800 px-2 w-full h-full focus:outline-2",
-                "outline-primary-500 dark:outline-lime-500 peer text-secondary-700",
+                "rounded-xs bg-white dark:bg-[#16161c] px-2 w-full h-full focus:outline-2",
+                "outline-primary-500 dark:outline-primary-300 peer text-secondary-700",
                 "dark:text-secondary-200 placeholder:text-base placeholder:text-secondary-600",
-                "dark:placeholder:text-secondary-400 placeholder:font-medium border-0",
+                "dark:placeholder:text-secondary-200 placeholder:font-medium border-0",
                 "focus:outline-priamry-500"
               )}
               autoFocus
@@ -103,10 +103,10 @@ const LettersByCategory = () => {
               className={cn(
                 "bg-primary-500 hover:bg-primary-600 text-white border-1 border-primary-500",
                 "hover:border-primary-600 peer-focus:outline-2 peer-focus:outline-primary-500",
-                "peer-focus:border-primary-500 focus:outline-2 focus:outline-primary-600",
+                "peer-focus:border-primary-500 focus:outline-2 focus:outline-primary-600 dark:hover:text-white",
                 "font-bold transition-colors duration-300 rounded-xs grid place-content-center dark:text-primary-950",
-                "dark:bg-lime-400 dark:hover:bg-lime-600 dark:border-lime-400 dark:hover:border-lime-600",
-                "dark:peer-focus:outline-lime-400 dark:peer-focus:border-lime-400 dark:focus:outline-lime-600"
+                "dark:bg-primary-300 dark:hover:bg-primary-500 dark:border-primary-300 dark:hover:border-primary-500",
+                "dark:peer-focus:outline-primary-300 dark:peer-focus:border-primary-300 dark:focus:outline-primary-500"
               )}
               onClick={handleSubmitSearchQuery}
             >
@@ -114,13 +114,13 @@ const LettersByCategory = () => {
             </Button>
           </div>
           {data && pages >= 1 ? (
-            <section className="rounded-md shadow-md bg-white dark:bg-slate-800 p-4">
+            <section className="rounded-md shadow-md bg-white dark:bg-[#1c1e26] p-4">
               <table className="rounded-sm w-full">
                 <thead className="hidden md:block">
                   <tr
                     className={cn(
-                      "rounded-t-sm bg-secondary-500 dark:bg-slate-950 divide-x divide-white",
-                      "dark:opacity-50 text-white uppercase grid grid-cols-12 gap-1"
+                      "rounded-t-sm bg-secondary-500 dark:bg-[#16161c]/80 text-white divide-x",
+                      "divide-white dark:divide-secondary-200/15 uppercase grid grid-cols-12 gap-1"
                     )}
                   >
                     <th className="col-span-1 py-1">Ano</th>

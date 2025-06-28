@@ -23,7 +23,7 @@ const MembersTeam = ({ member }: { member: memberTypes }) => {
   };
 
   return (
-    <div className="relative shadow-lg rounded-2xl bg-white/55 dark:bg-slate-950 p-4 flex flex-col gap-4">
+    <div className="relative shadow-lg rounded-2xl bg-white/55 dark:bg-[#1c1e26] p-4 flex flex-col gap-4">
       <div className="h-auto xl:h-96 bg-cover bg-center">
         <img
           src={`${BASE_URL}${member.featuredImage.node.filePath}`}
@@ -33,7 +33,7 @@ const MembersTeam = ({ member }: { member: memberTypes }) => {
       </div>
 
       <div className="flex flex-col gap-6">
-        <h2 className="text-xl text-primary-600 dark:text-lime-400 font-bold leading-5 xl:leading-6">
+        <h2 className="text-xl text-primary-600 dark:text-amber-300/75 font-bold leading-5 xl:leading-6">
           {member.title}
         </h2>
         <div

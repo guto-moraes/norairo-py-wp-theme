@@ -17,7 +17,7 @@ const Footer = () => {
   const { data: footerLogo } = useQueryFooterTheme();
 
   return (
-    <footer className="bg-primary-700 dark:bg-slate-950 text-white w-full py-6 sm:py-0 h-auto md:h-[14.5rem]">
+    <footer className="bg-primary-700 dark:bg-[#1c1e26] text-white w-full py-6 sm:py-0 h-auto md:h-[14.5rem]">
       <Container className="h-full flex flex-col justify-center space-y-8">
         <div className="flex justify-between items-center">
           {
@@ -41,8 +41,8 @@ const Footer = () => {
                         title={item.label}
                         to={item.uri}
                         className={cn(
-                          "text-white hover:text-lime-400 transition-colors duration-300",
-                          "dark:text-sky-400 dark:hover:text-white dark:hover:opacity-50"
+                          "text-white hover:text-amber-300/75 transition-colors duration-300",
+                          "dark:text-amber-300/75 dark:hover:text-white dark:hover:opacity-50"
                         )}
                       >
                         {item.label}
@@ -63,8 +63,8 @@ const Footer = () => {
             to="/politica-de-privacidade"
             title="Política de Privacidade"
             className={cn(
-              "text-white hover:text-lime-500 transition-colors duration-300",
-              "dark:text-sky-400 dark:hover:text-white dark:hover:opacity-50"
+              "text-white hover:text-amber-300/75 transition-colors duration-300",
+              "dark:text-amber-300/75 dark:hover:text-white dark:hover:opacity-50"
             )}
           >
             Política de Privacidade

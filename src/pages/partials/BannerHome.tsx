@@ -18,10 +18,10 @@ const BannerHome = ({ banner }: BannerHomeProps) => {
       style={{ backgroundImage: `url(${bannerImage})` }}
       className="w-full h-72 lg:h-96 xl:h-[700px] bg-cover bg-center bg-no-repeat"
     >
-      <div className="bg-primary-950/90 dark:bg-primary-950/95 w-full h-full grid place-content-center">
+      <div className="bg-primary-950/90 dark:bg-[#0B0C14]/92.5 w-full h-full grid place-content-center">
         <div
           className={cn(
-            "bg-primary-950/60 p-6 xl:py-12 xl:px-10 flex flex-col sm:flex-row justify-center",
+            "bg-primary-950/60 dark:bg-[#0B0C14]/70 p-6 xl:py-12 xl:px-10 flex flex-col sm:flex-row justify-center",
             "max-sm:divide-y sm:divide-x xl:justify-between items-center gap-2 min-[425px]:gap-3",
             "lg:gap-8 w-full sm:w-[600px] lg:w-[850px] xl:w-[900px] h-full"
           )}
@@ -46,7 +46,7 @@ const BannerHome = ({ banner }: BannerHomeProps) => {
               speedReveal={1.1}
               speedSegment={0.3}
               delay={1.4}
-              className="text-lime-500 text-4xl lg:text-7xl font-black uppercase tracking-wider"
+              className="text-lime-500 dark:text-amber-300 text-4xl lg:text-7xl font-black uppercase tracking-wider"
             >
               {title[2] as string}
             </TextEffect>

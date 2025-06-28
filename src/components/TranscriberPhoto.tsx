@@ -7,7 +7,7 @@ const TranscriberPhoto = ({ transcriberId }: { transcriberId: string }) => {
   const { data } = useQueryTranscriberPhoto(id);
 
   return (
-    <li className="rounded-md drop-shadow-sm bg-white/65 p-2.5 flex items-center gap-2">
+    <li className="rounded-md drop-shadow-sm bg-white/65 dark:bg-[#1c1e26] p-2.5 flex items-center gap-2">
       <div className="rounded-full size-12 bg-cover bg-center">
         {
           data && (
@@ -21,10 +21,10 @@ const TranscriberPhoto = ({ transcriberId }: { transcriberId: string }) => {
         }
       </div>
       <hgroup className="h-11 flex flex-col justify-center">
-        <h2 className="text-primary-600 text-[12.5px] font-bold">
+        <h2 className="text-primary-600 dark:text-primary-300 text-[12.5px] font-bold">
           {transcriberId}
         </h2>
-        <p className="text-[11px] text-secondary-700">Transcritor do arquivo</p>
+        <p className="text-[11px] text-secondary-700 dark:text-white/75">Transcritor do arquivo</p>
       </hgroup>
     </li>
   );

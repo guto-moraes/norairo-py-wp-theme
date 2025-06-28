@@ -8,11 +8,11 @@ interface IPresentation {
 
 const Presentation = ({ title, text }: IPresentation) => {
   return (
-    <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-secondary-100/60 dark:bg-slate-950">
+    <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-secondary-100/60 dark:bg-transparent">
       <Container>
         <h2 className={cn(
           "text-2xl sm:text-3xl lg:text-4xl text-primary-600",
-          "dark:text-sky-500 text-center font-black uppercase mb-8"
+          "dark:text-sky-500 dark:text-amber-300 text-center font-black uppercase mb-8"
         )}>
           {title}
         </h2>

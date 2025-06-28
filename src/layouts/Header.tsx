@@ -17,7 +17,7 @@ const Header = () => {
   const logoDark = logoData?.norairoTheme.norairoThemeSettings.logo.node.guid;
   
   return (
-    <header className="shadow-md bg-white/85 dark:bg-slate-950 h-20 w-full max-w-screen">
+    <header className="shadow-md bg-white/85 dark:bg-[#1c1e26] h-20 w-full max-w-screen">
       <Container className="h-full">
         {logoData && data && (
           <Navbar dataItems={data}>

@@ -21,8 +21,12 @@ const SingleLetter = () => {
   if (isLoading) return <DataLoading />;
   if (isError) return <Errors message={error.message} />;
 
+  if(data?.oficio === null){
+    window.location.href = "https://oficiosdaguerra.com/404";
+  }
+
   return (
-    <Main className="py-10 xl:py-16 dark:bg-primary-900 h-full">
+    <Main className="py-10 xl:py-16 h-full">
       <Container>
         {data && (
           <>
@@ -36,6 +40,7 @@ const SingleLetter = () => {
                       url={data.oficio.categories.nodes[0].link}
                       title="Ver todos os arquivos da categoria Comando de Esquadra"
                       label={data.oficio.categories.nodes[0].name}
+                      className="tracking-wide uppercase dark:text-amber-300/75"
                     />
                   </Sidebar.ListItem>
                   <Sidebar.ListItem
@@ -91,7 +96,7 @@ const SingleLetter = () => {
                   em: {dateTodayAbntFormat()}.
                 </ClipboardArea>
               </aside>
-              <div className="bg-secondary-100/75 p-4 rounded-md md:col-span-8 xl:col-span-9">
+              <div className="bg-secondary-100/75 dark:bg-[#1c1e26] p-4 rounded-md md:col-span-8 xl:col-span-9">
                 <PDFDocument
                   fileName={data.oficio.title}
                   url={data.oficio.details.transcriptionFileLink.node.guid}

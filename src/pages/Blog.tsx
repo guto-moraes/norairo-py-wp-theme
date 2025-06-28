@@ -35,7 +35,7 @@ const Blog = () => {
   if (isError) return <Errors message={error.message} />;
 
   return (
-    <Main className="py-10 xl:py-16 dark:bg-primary-900 h-full">
+    <Main className="py-10 xl:py-16 h-full">
       <Container className="max-w-5xl">
         <Title title="Blog" className="uppercase" />
         {data && (
@@ -45,8 +45,8 @@ const Blog = () => {
                 <div
                   key={Math.random()}
                   className={cn(
-                    "border-l-4 shadow-md hover:shadow-xl border-primary-500 dark:border-lime-400 rounded-xs",
-                    "transition-all duration-300 bg-white dark:bg-slate-950 p-4 w-full flex flex-col"
+                    "border-l-4 shadow-md hover:shadow-xl border-primary-500 dark:border-amber-300/75 rounded-xs",
+                    "transition-all duration-300 bg-white dark:bg-[#1c1e26] p-4 w-full flex flex-col"
                   )}
                 >
                   <span className="text-xs text-secondary-700 dark:text-white dark:opacity-70 font-medium">
@@ -54,7 +54,7 @@ const Blog = () => {
                   </span>
                   <Link
                     className={cn(
-                      "leading-6 text-2xl text-primary-700 dark:text-sky-400 font-bold",
+                      "leading-6 text-2xl text-primary-700 dark:text-primary-300 font-bold",
                       "hover:text-secondary-600 transition-colors duration-300"
                     )}
                     to={`./${post.slug}`}

@@ -21,7 +21,7 @@ const ClipboardArea = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div className="relative rounded-md drop-shadow-xs bg-white/65 p-2.5">
+    <div className="relative rounded-md drop-shadow-xs bg-white/65 p-2.5 dark:bg-[#1c1e26]">
       <p
         className={cn(
           "rounded-xs bg-sky-600 text-[0.625rem] text-white font-semibold uppercase py-0.5 px-1.5 w-max",
@@ -35,9 +35,10 @@ const ClipboardArea = ({ children }: { children: React.ReactNode }) => {
         title="Copiar citação"
         arial-label="Copiar citação"
         className={cn(
-          "absolute -top-12 right-0 p-1 bg-secondary-200/40 shadow-inner rounded-full",
+          "absolute -top-12 right-0 p-1.5 bg-secondary-200/40 shadow-inner rounded-full",
           "hover:bg-secondary-500 transition-colors duration-300 border border-primary-100",
-          "hover:border-transparent text-secondary-700 hover:text-white group/copy"
+          "hover:border-transparent text-secondary-700 hover:text-white group/copy dark:border-0",
+          "dark:text-amber-300/75 dark:hover:bg-amber-300/75 dark:bg-[#1c1e26] dark:hover:text-[#1c1e26]"
         )}
         onClick={clipboard}
       >
@@ -49,7 +50,7 @@ const ClipboardArea = ({ children }: { children: React.ReactNode }) => {
       </Button>
       <p
         ref={citation}
-        className="text-xs text-secondary-900 hyphens-auto max-w-full overflow-hidden text-clip"
+        className="text-xs text-secondary-900 dark:text-white/75 hyphens-auto max-w-full overflow-hidden text-clip"
       >
         {children}
       </p>

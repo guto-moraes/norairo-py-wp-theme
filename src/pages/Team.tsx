@@ -26,15 +26,15 @@ const Team = () => {
   });
 
   return (
-    <Main className="py-10 xl:py-16 dark:bg-primary-900 h-full">
+    <Main className="py-10 xl:py-16 h-full">
       <Container>
         <Title title="Equipe de Trabalho" className="uppercase" />
-        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-sky-400 font-extrabold mb-8">
+        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-primary-300 font-extrabold mb-8">
           Coordenador
         </h2>
         <section
           className={cn(
-            "rounded-2xl shadow-lg bg-white/55 dark:bg-slate-950 p-4 w-full max-w-screen",
+            "rounded-2xl shadow-lg bg-white/55 dark:bg-[#1c1e26] p-4 w-full max-w-screen",
             "grid auto-rows-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8"
           )}
         >
@@ -44,7 +44,7 @@ const Team = () => {
             }
           })}
         </section>
-        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-sky-400 font-extrabold mb-8">
+        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-primary-300 font-extrabold mb-8">
           Bolsistas da Equipe de Transcrição
         </h2>
         <section className="grid auto-rows-auto sm:grid-cols-2 lg:grid-cols-3 gap-8">
