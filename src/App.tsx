@@ -8,6 +8,7 @@ import LettersByCategory from "@/pages/LettersByCategory";
 import SingleLetter from "@/pages/SingleLetter";
 import Blog from "@/pages/Blog";
 import BlogArticle from "@/pages/BlogArticle";
+import NotFound from "@/pages/NotFound";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path=":slug"  element={<BlogArticle />} />
       </Route>
       <Route path="contato" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

@@ -11,11 +11,11 @@ import type {
 } from "@/types/menus";
 
 type NavbarTypes = {
-  logo?: string;
   dataItems: MainMenuTypes;
+  children: React.ReactNode;
 };
 
-const Navbar = ({ logo, dataItems }: NavbarTypes) => {
+const Navbar = ({ dataItems, children }: NavbarTypes) => {
   const [showMenu, setShowMenu] = useState(false);
   const [open, setOpen] = useState(false);
   const dropdown = useRef<HTMLUListElement | null>(null);
@@ -75,25 +75,17 @@ const Navbar = ({ logo, dataItems }: NavbarTypes) => {
     if (showMenu) {
       setTimeout(() => {
         setShowMenu(false);
-      }, 3500);
+      }, 5000);
     }
   }, [open, showMenu]);
 
   return (
     <nav className="w-full max-w-screen h-full flex justify-between items-center">
-      {logo && (
-        <NavLink to="/" title="Página Inicial" className="max-w-48">
-          <img
-            src={logo}
-            title="Logotipo do Projeto Ofícios da Guerra"
-            className="w-40 lg:w-48 mx-auto sm:mx-0"
-          />
-        </NavLink>
-      )}
+      {children}
       <ul
         className={cn(
-          "bg-primary-700 md:bg-transparent py-3 px-6 md:px-0 flex flex-col gap-3.5",
-          "md:flex-row justify-start md:justify-end items-start md:items-center",
+          "max-md:bg-primary-700 dark:max-md:bg-primary-800 py-3 px-6 md:px-0",
+          "flex flex-col gap-3.5 md:flex-row justify-start md:justify-end items-start md:items-center",
           "md:gap-4 max-md:z-30 max-md:h-screen w-full max-w-72 min-w-max max-md:absolute",
           "max-md:top-20 max-md:right-0 max-md:pt-6 transition-transform duration-300",
           showMenu ? "max-md:translate-x-0" : "max-md:translate-x-200"
