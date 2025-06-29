@@ -70,21 +70,6 @@ const Letters = () => {
   if (isLoading) return <DataLoading />;
   if (isError) return <Errors message={error.message} />;
 
-  const letters = data?.oficios.nodes.sort(function (a, b) {
-    const anoA = a.details.originalfilecreatedat.split("/");
-    const anoB = b.details.originalfilecreatedat.split("/");
-
-    if (anoA[anoA.length - 1] < anoB[anoB.length - 1]) {
-      return -1;
-    }
-    if (anoA[anoA.length - 1] > anoB[anoB.length - 1]) {
-      return 1;
-    }
-    return 0;
-  });
-
-  console.log(letters);
-
   return (
     <>
       <Main className="py-10 xl:py-16 h-full">

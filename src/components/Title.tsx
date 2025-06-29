@@ -13,8 +13,6 @@ const Title = ({
   category?: string;
 }) => {
 
-console.log(title)
-
   const heading = "Ofícios da Guerra";
 
   useEffect(() => {

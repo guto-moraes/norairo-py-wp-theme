@@ -84,7 +84,7 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
       {children}
       <ul
         className={cn(
-          "max-md:bg-[#0B0C14] dark:max-md:bg-[#0B0C14]/90 py-3 px-6 md:px-0",
+          "max-md:bg-[#0B0C14] dark:max-md:bg-[#16161c] py-3 px-6 md:px-0",
           "flex flex-col gap-3.5 md:flex-row justify-start md:justify-end items-start md:items-center",
           "md:gap-4 max-md:z-30 max-md:h-screen w-full max-w-72 min-w-max max-md:absolute",
           "max-md:top-20 max-md:right-0 max-md:pt-6 transition-transform duration-300",
