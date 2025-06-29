@@ -19,8 +19,8 @@ const Header = () => {
           {logoData && data && (
             <Navbar dataItems={data}>
               <Link to="/" title="Logotipo do site Projeto Ofícios da Guerra">
-                <img src={logoLight} className="object-cover w-40 lg:w-48 mx-auto sm:mx-0 dark:hidden" />
-                <img src={logoDark} className="object-cover w-40 lg:w-48 mx-auto sm:mx-0 hidden dark:block" />
+                <img src={logoLight} className="object-cover w-32 lg:w-36 mx-auto sm:mx-0 dark:hidden" />
+                <img src={logoDark} className="object-cover w-32 lg:w-36 mx-auto sm:mx-0 hidden dark:block" />
               </Link>
             </Navbar>
           )}
