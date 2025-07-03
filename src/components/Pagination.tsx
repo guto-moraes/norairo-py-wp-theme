@@ -52,7 +52,7 @@ const Pagination = ({
                 "rounded-xs bg-secondary-500 dark:bg-amber-300/75 hover:bg-primary-500 dark:hover:bg-amber-300",
                 "py-1 text-white dark:text-slate-900 text-xs dark:disabled:bg-secondary-700",
                 "dark:disabled:text-white transition-colors duration-300 disabled:cursor-not-allowed",
-                "disabled:bg-secondary-100 disabled:text-secondary-700 font-medium w-7"
+                "disabled:bg-rose-600 font-medium w-7"
               )}
               disabled={page === currentPage ? true : false}
               onClick={() => handlePagination(page)}

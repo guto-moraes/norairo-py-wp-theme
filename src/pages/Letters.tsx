@@ -83,7 +83,7 @@ const Letters = () => {
               placeholder="Digite um termo ou um ano para pesquisar"
               className={cn(
                 "rounded-xs bg-white dark:bg-[#16161c] px-2 w-full h-full focus:outline-2",
-                "outline-primary-500 dark:outline-primary-300 peer text-secondary-700",
+                "outline-rose-500 dark:outline-rose-300 peer text-secondary-700",
                 "dark:text-secondary-200 placeholder:text-base placeholder:text-secondary-600",
                 "dark:placeholder:text-secondary-200 placeholder:font-medium border-0",
                 "focus:outline-priamry-500"
@@ -95,12 +95,12 @@ const Letters = () => {
               type="button"
               title="Pesquisar"
               className={cn(
-                "bg-primary-500 hover:bg-primary-600 text-white border-1 border-primary-500",
-                "hover:border-primary-600 peer-focus:outline-2 peer-focus:outline-primary-500",
-                "peer-focus:border-primary-500 focus:outline-2 focus:outline-primary-600 dark:hover:text-white",
-                "font-bold transition-colors duration-300 rounded-xs grid place-content-center dark:text-primary-950",
-                "dark:bg-primary-300 dark:hover:bg-primary-500 dark:border-primary-300 dark:hover:border-primary-500",
-                "dark:peer-focus:outline-primary-300 dark:peer-focus:border-primary-300 dark:focus:outline-primary-500"
+                "bg-rose-500 hover:bg-rose-600 text-white border-1 border-rose-500",
+                "hover:border-rose-600 peer-focus:outline-2 peer-focus:outline-rose-500",
+                "peer-focus:border-rose-500 focus:outline-2 focus:outline-rose-600 dark:hover:text-white",
+                "font-bold transition-colors duration-300 rounded-xs grid place-content-center dark:text-rose-950",
+                "dark:bg-rose-300 dark:hover:bg-rose-500 dark:border-rose-300 dark:hover:border-rose-500",
+                "dark:peer-focus:outline-rose-300 dark:peer-focus:border-rose-300 dark:focus:outline-rose-500"
               )}
               onClick={handleSubmitSearchQuery}
             >

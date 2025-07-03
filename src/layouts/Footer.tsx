@@ -27,7 +27,7 @@ const Footer = () => {
                   footerLogo?.norairoTheme.norairoThemeSettings.footerLogo.node.guid
                 }
                 alt="Logo do projeto Ofícios da Guerra"
-                className="w-32 lg:w-36"
+                className="w-40 lg:w-48"
               />
             )
           }
