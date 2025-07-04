@@ -18,10 +18,12 @@ const StatsHome = ({ stats }: StatsHomeProps) => {
     <section className="py-8 md:py-16 xl:py-24 w-full max-w-screen bg-white dark:bg-[#1c1e26]">
       <Container className="flex flex-col gap-6 justify-center items-center">
         <div className="w-full">
-          <h2 className={cn(
-            "mb-2 text-center text-2xl sm:text-3xl lg:text-4xl",
-            "text-primary-600 dark:text-primary-300 font-bold uppercase"
-          )}>
+          <h2
+            className={cn(
+              "mb-2 text-center text-2xl sm:text-3xl lg:text-4xl",
+              "text-primary-600 dark:text-sky-400 font-bold uppercase"
+            )}
+          >
             {stats?.norairoTheme.norairoThemeSettings.titleSectionOne}
           </h2>
           <p className="text-center text-secondary-600 dark:text-white md:text-lg font-medium mx-auto max-w-screen">

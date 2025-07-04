@@ -33,3 +33,7 @@
   --color-lattes-500: oklch(45.53% 0.126 249.19);
   --color-lattes-600: oklch(38.92% 0.106 248.4);  
 }
+
+body {
+  font-family: "Space Grotesk", "Inter", sans-serif,
+}

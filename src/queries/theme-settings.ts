@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import request from "graphql-request";
 import {
+  CONTACT_PAGE_TEXT,
   FOOTER_THEME,
   HEADER_THEME,
   HOME_THEME,
 } from "@/graphql/theme-settings";
 import type {
+  contatcPageText,
   footerThemeTypes,
   headerThemeTypes,
   homePageThemeTypes,
@@ -43,5 +45,17 @@ export const useQueryFooterTheme = () => {
   return useQuery<footerThemeTypes>({
     queryKey: ["footer-theme"],
     queryFn: () => fetchFooterTheme(),
+  });
+};
+
+
+const fetchContactPageText = async () => {
+  return await request<contatcPageText>(BASE_GRAPHQL_URL, CONTACT_PAGE_TEXT);
+};
+
+export const useQueryContactPageText = () => {
+  return useQuery<contatcPageText>({
+    queryKey: ["contact-page-theme"],
+    queryFn: () => fetchContactPageText(),
   });
 };

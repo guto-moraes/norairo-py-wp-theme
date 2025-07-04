@@ -10,6 +10,8 @@ import Button from "@/components/Button";
 import cn from "@/utils/cn";
 import Alert from "@/components/Alert";
 import { CheckCheck } from "lucide-react";
+import { useQueryContactPageText } from "@/queries/theme-settings";
+import DataLoading from "@/components/DataLoading";
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -37,6 +39,8 @@ type FormFiedlsTypes = z.infer<typeof FormFieldsSchema>;
 const Contact = () => {
   const [success, setSuccess] = useState(false);
   const contactForm = useRef<HTMLFormElement | null>(null);
+
+  const { data, isLoading } = useQueryContactPageText();
 
   const {
     register,
@@ -80,6 +84,8 @@ const Contact = () => {
     }, 2250);
   }, [isSubmitSuccessful, contactForm, success]);
 
+  if(isLoading) return <DataLoading />
+
   return (
     <Main className="py-10 xl:py-16 h-full">
       <Container>
@@ -88,7 +94,7 @@ const Contact = () => {
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-8 xl:gap-16">
           <div className="flex flex-col justify-center gap-8 sm:my-auto lg:my-0">
             {isSubmitSuccessful && success && (
-              <Alert className=" py-2 w-full border-transparent bg-emerald-500 dark:bg-transparent dark:border-lime-600">
+              <Alert className="py-2 w-full border-transparent bg-emerald-500 dark:bg-transparent dark:border-lime-600">
                 <CheckCheck
                   className="stroke-white dark:stroke-lime-600"
                   size={32}
@@ -98,30 +104,15 @@ const Contact = () => {
                 </p>
               </Alert>
             )}
-            <h2 className="text-xl lg:text-2xl xl:text-3xl text-primary-600 dark:text-primary-300 font-black">
-              Queremos saber sua opinião!
-            </h2>
-            <p className="text-secondary-800 dark:text-white text-justify hyphens-auto">
-              Ao longo do desenvolvimento do Projeto{" "}
-              <strong className="text-primary-700 dark:text-amber-300/75">
-                Ofícios da Guerra
-              </strong>{" "}
-              nos deparamos com muitos desafios mas, ainda assim, ao seu final,
-              cremos que conseguimos apresentar as transcrições produzidas
-              durante a{" "}
-              <strong className="text-primary-700 dark:text-amber-300/75">
-                Guerra da Tríplice Aliança contra o Paraguai
-              </strong>{" "}
-              com o mais alto nível de fidedignidade.
-            </p>
-            <p className="text-gray-800 dark:text-white text-justify hyphens-auto">
-              Ainda assim, queremos saber a sua opinião sobre o conteúdo que
-              aqui disponibilizamos e eventuais melhorias que poderemos
-              implementar no futuro.
-            </p>
-            <p className="text-gray-800 dark:text-white text-justify hyphens-auto">
-              Antecipamos nossos agradecimentos por sua contribuição.
-            </p>
+            <div 
+              className={cn(
+                "[&_h2]:text-xl [&_h2]:lg:text-2xl [&_h2]:xl:text-3xl [&_h2]:text-primary-600 [&_h2]:dark:text-primary-300",
+                "[&_h2]:font-black [&_p]:text-secondary-800 [&_p]:dark:text-white [&_p]:text-justify [&_p]:hyphens-auto",
+                "[&_p>strong]:text-primary-700 [&_p>strong]:dark:text-amber-300/75",
+                "flex flex-col justify-center gap-8 sm:my-auto lg:my-0"
+              )}
+              dangerouslySetInnerHTML={{ __html: data?.norairoTheme.norairoThemeSettings.contactText || "" }} 
+            />
           </div>
           <form
             ref={contactForm}

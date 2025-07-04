@@ -11,10 +11,12 @@ const BeyondHome = ({ beyond }: BeyondHomeProps) => {
     <section className="py-8 sm:py-16 xl:py-24 w-full">
       <Container className="grid grid-cols-6 gap-8">
         <div className="col-span-6 sm:col-span-3 w-full flex flex-col gap-4 sm:my-auto">
-          <h2 className={cn(
-            "text-3xl md:text-4xl text-primary-600 dark:text-primary-300",
-            "text-center sm:text-left font-bold uppercase"
-          )}>
+          <h2
+            className={cn(
+              "text-3xl md:text-4xl text-primary-600 dark:text-sky-400",
+              "text-center sm:text-left font-bold uppercase"
+            )}
+          >
             {beyond?.norairoTheme.norairoThemeSettings.titleSectionTwo}
           </h2>
           <p

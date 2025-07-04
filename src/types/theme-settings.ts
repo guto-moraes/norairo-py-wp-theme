@@ -49,8 +49,42 @@ export type homePageThemeTypes = {
           guid: string;
         };
       };
+cpnqUrl: string;
       cpnqLogo: {
         node: {
+          altText: string;
+          guid: string;
+        };
+      };
+      darkLogoCpnq: {
+        node: {
+          altText: string;
+          guid: string;
+        };
+      };
+      ifmtJuinaUrl: string;
+      ifmtJuinaLogo: {
+        node: {
+          altText: string;
+          guid: string;
+        };
+      };
+      darkLogoIfmtJuina: {
+        node: {
+          altText: string;
+          guid: string;
+        };
+      };
+      apmtUrl: string;
+      apmtLogo: {
+        node: {
+          altText: string;
+          guid: string;
+        };
+      };
+      darkLogoApmt: {
+        node: {
+          altText: string;
           guid: string;
         };
       };
@@ -67,6 +101,14 @@ export type footerThemeTypes = {
         };
       };
       privacyPolicy: string;
+    };
+  };
+};
+
+export type contatcPageText = {
+  norairoTheme: {
+    norairoThemeSettings: {
+      contactText: string;
     };
   };
 };

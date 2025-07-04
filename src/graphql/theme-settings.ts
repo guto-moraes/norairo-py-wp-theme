@@ -52,11 +52,45 @@ export const HOME_THEME = gql`
             guid
           }
         }
+        cpnqUrl
         cpnqLogo {
           node {
+            altText
             guid
           }
         }
+        darkLogoCpnq {
+          node {
+            altText
+            guid
+          }
+        }
+        ifmtJuinaUrl
+        ifmtJuinaLogo {
+          node {
+            altText
+            guid
+          }
+        }
+        darkLogoIfmtJuina {
+          node {
+            altText
+            guid
+          }
+        }
+        apmtUrl
+        apmtLogo {
+          node {
+            altText
+            guid
+          }
+        }
+        darkLogoApmt {
+          node {
+            altText
+            guid
+          }
+        }          
       }
     }
   }
@@ -72,6 +106,16 @@ export const FOOTER_THEME = gql`
           }
         }
         privacyPolicy
+      }
+    }
+  }
+`;
+
+export const CONTACT_PAGE_TEXT = gql`
+  query ContactQuery {
+    norairoTheme {
+      norairoThemeSettings {
+        contactText
       }
     }
   }
