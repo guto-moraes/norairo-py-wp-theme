@@ -5,17 +5,19 @@ import { PAGES } from "@/graphql/pages";
 const BASE_GRAPHQL_URL = import.meta.env.VITE_GRAPHQL_BASE_URL;
 
 type pageTypes = {
-    page: {
-        title: string;
-        content?: string;
-    }
-}
+  page: {
+    databaseId: number;
+    uri: string;
+    title: string;
+    content: string;
+  };
+};
 
 const fetchPage = async (id: string) => {
-    return await request<pageTypes>(BASE_GRAPHQL_URL, PAGES, {
-        id
-    })
-}
+  return await request<pageTypes>(BASE_GRAPHQL_URL, PAGES, {
+    id,
+  });
+};
 
 export const useQueryPage = (id: string) => {
   return useQuery<pageTypes>({

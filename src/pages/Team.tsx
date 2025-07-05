@@ -32,7 +32,7 @@ const Team = () => {
         <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-sky-400 font-extrabold mb-8">
           Coordenador
         </h2>
-        <section
+        <div
           className={cn(
             "rounded-2xl shadow-lg bg-white/55 dark:bg-[#1c1e26] p-4 w-full max-w-screen",
             "grid auto-rows-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8"
@@ -43,7 +43,23 @@ const Team = () => {
               return <CoordinatorTeam key={member.id} member={member} />;
             }
           })}
-        </section>
+        </div>
+        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-sky-400 font-extrabold mb-8">
+          Vice-Coordenador
+        </h2>
+        <div
+          className={cn(
+            "rounded-2xl shadow-lg bg-white/55 dark:bg-[#1c1e26] p-4 w-full max-w-screen",
+            "grid auto-rows-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8"
+          )}
+        >
+          {data.membros.nodes.map((member: memberTypes) => {
+            if (member.categories.nodes[0].slug === "vice-coordenador") {
+              return <CoordinatorTeam key={member.id} member={member} />;
+            }
+          })}
+        </div>
+
         <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-sky-400 font-extrabold mb-8">
           Bolsistas da Equipe de Transcrição
         </h2>

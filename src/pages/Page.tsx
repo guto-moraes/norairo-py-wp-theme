@@ -24,7 +24,7 @@ const Page = () => {
         {data && (
           <>
             <Title title={data.page.title} className="uppercase" />
-            { data.page.content && <Article content={data.page.content} /> }
+            <Article content={data.page.content} />
           </>
         )}
       </Container>
