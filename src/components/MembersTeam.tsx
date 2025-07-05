@@ -33,7 +33,7 @@ const MembersTeam = ({ member }: { member: memberTypes }) => {
       </div>
 
       <div className="flex flex-col gap-6">
-        <h2 className="text-xl text-primary-600 dark:text-amber-300/75 font-bold leading-5 xl:leading-6">
+        <h2 className="text-xl text-primary-600 dark:text-amber-300 font-bold leading-5 xl:leading-6">
           {member.title}
         </h2>
         <div

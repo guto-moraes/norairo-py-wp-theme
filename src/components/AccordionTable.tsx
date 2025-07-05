@@ -60,7 +60,7 @@ const AccordionTable = ({
                     )}
                     title={item.title}
                   >
-                    <Icons.PDFFile className="size-5 min-w-6 fill-red-600 dark:fill-[#f43e5c] mr-1 mb-1 hidden md:inline-block" />
+                    <Icons.PDFFile className="size-5 min-w-6 fill-red-600 dark:fill-rose-500 mr-1 mb-1 hidden md:inline-block" />
                     <p className="max-md:line-clamp-3 md:truncate leading-5">
                       {item.title}
                     </p>
@@ -71,7 +71,7 @@ const AccordionTable = ({
                       to={item.categories.nodes[0].link}
                       title={`Ver todos os arquivos da categoria`}
                       className={cn(
-                        "text-sky-600 dark:text-amber-300/75 hover:text-secondary-400",
+                        "text-sky-600 dark:text-amber-300 hover:text-secondary-400",
                         "tracking-wide font-semibold uppercase transiton-colors duration-300"
                       )}
                     >
@@ -101,14 +101,14 @@ const AccordionTable = ({
                   <Link
                     to={item.link}
                     className={cn(
-                      "relative group/view rounded-full hover:bg-primary-200 dark:hover:bg-primary-300",
+                      "relative group/view rounded-full hover:bg-primary-200 dark:hover:bg-lime-400",
                       "md:hover:bg-secondary-200/55 size-7 grid place-content-center",
                       "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
                     <Icons.FileText
                       className={cn(
-                        "size-5 fill-white dark:fill-primary-300 md:fill-primary-500",
+                        "size-5 fill-white dark:fill-lime-400 md:fill-primary-500",
                         "dark:group-hover/view:fill-primary-950 pointer-events-none"
                       )}
                     />
@@ -125,14 +125,14 @@ const AccordionTable = ({
                     data-open={String(item.id)}
                     onClick={handleModal}
                     className={cn(
-                      "relative group/modal rounded-full hover:bg-primary-200 dark:hover:bg-primary-300",
+                      "relative group/modal rounded-full hover:bg-primary-200 dark:hover:bg-lime-400",
                       "md:hover:bg-secondary-200/55 size-7 grid place-content-center",
                       "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
                     <Icons.Eye
                       className={cn(
-                        "size-5 fill-white dark:fill-primary-300 md:fill-primary-500",
+                        "size-5 fill-white dark:fill-lime-400 md:fill-primary-500",
                         "dark:group-hover/modal:fill-primary-950 pointer-events-none"
                       )}
                     />
@@ -147,14 +147,14 @@ const AccordionTable = ({
                     download
                     target="_blank"
                     className={cn(
-                      "relative group/download rounded-full hover:bg-primary-200 dark:hover:bg-primary-300",
+                      "relative group/download rounded-full hover:bg-primary-200 dark:hover:bg-lime-400",
                       "md:hover:bg-secondary-200/55 size-7 grid place-content-center",
                       "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
                     <Icons.Download
                       className={cn(
-                        "size-5 fill-white dark:fill-primary-300 md:fill-primary-500",
+                        "size-5 fill-white dark:fill-lime-400 md:fill-primary-500",
                         "dark:group-hover/download:fill-primary-950 pointer-events-none"
                       )}
                     />
@@ -168,9 +168,9 @@ const AccordionTable = ({
                     onClick={handleShowDescription}
                     className={cn(
                       "rounded-full hover:bg-primary-200 md:hover:bg-secondary-200/55 size-7 grid",
-                      "dark:hover:bg-primary-300 relative group/show place-content-center group/show",
+                      "dark:hover:bg-lime-400 relative group/show place-content-center group/show",
                       isOpen === item.id
-                        ? "bg-secondary-600 md:bg-primary-400 dark:bg-primary-300"
+                        ? "bg-secondary-600 md:bg-primary-400 dark:bg-lime-400"
                         : "bg-secondary-300/50 md:bg-transparent dark:bg-transparent"
                     )}
                   >
@@ -180,7 +180,7 @@ const AccordionTable = ({
                         "dark:group-hover/show:fill-primary-950 pointer-events-none",
                         isOpen === item.id
                           ? "fill-white dark:fill-primary-950 rotate-180"
-                          : "fill-white md:fill-primary-500 dark:fill-primary-300 rotate-0"
+                          : "fill-white md:fill-primary-500 dark:fill-lime-400 rotate-0"
                       )}
                     />
                     <Tooltip

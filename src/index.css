@@ -1,3 +1,35 @@
+@font-face{
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;    
+  src: url("https://oficiosdaguerra.com/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("ttf")
+       url("https://oficiosdaguerra.com/fonts/SpaceGrotesk-VariableFont_wght.woff2") format("woff2");
+}
+
+@font-face{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;    
+  src: url("https://oficiosdaguerra.com/fonts/Inter-VariableFont_opsz,wght.ttf") format("ttf")
+       url("https://oficiosdaguerra.com/fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2");
+}
+
+
+@font-face{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: italic;    
+  src: url("https://oficiosdaguerra.com/fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("ttf")
+       url("https://oficiosdaguerra.com/fonts/Inter-Italic-VariableFont_opsz,wght.woff2") format("woff2");
+}
+
+body {
+  font-family: "Space Grotesk", "Inter", sans-serif,
+}
+
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -5,7 +37,9 @@
 @plugin "tailwind-scrollbar";
 
 @theme {
-  --font-sans: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-space: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-primary-50: oklch(93.93% 0.018 279.11);
   --color-primary-100: oklch(88.07% 0.035 278.47);
@@ -32,8 +66,4 @@
   --color-lattes-50: oklch(94.42% 0.03 238.83);
   --color-lattes-500: oklch(45.53% 0.126 249.19);
   --color-lattes-600: oklch(38.92% 0.106 248.4);  
-}
-
-body {
-  font-family: "Space Grotesk", "Inter", sans-serif,
 }

@@ -7,8 +7,6 @@ import path from "node:path";
 // Get the main.js where all JavaScript files are imported
 const JS_FILE = path.resolve("src/main.tsx");
 
-
-
 // Define where the compiled and minified JavaScript files will be saved
 const BUILD_DIR = path.resolve(__dirname, "dist");
 
@@ -27,7 +25,7 @@ export default defineConfig({
     manifest: true, // Generate manifest.json file (for caching)
     emptyOutDir: true, // Empty the dist folder before building
     outDir: BUILD_DIR,
-    chunkSizeWarningLimit: 528.6,
+    chunkSizeWarningLimit: 620,
     rollupOptions: {
       input: JS_FILE,
       output: {
@@ -36,7 +34,7 @@ export default defineConfig({
         assetFileNames: `[name].[ext]`,
       },
     },
-  },  
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -46,7 +44,7 @@ export default defineConfig({
       "@/pages": path.resolve(__dirname, "./src/pages"),
       "@/queries": path.resolve(__dirname, "./src/queries"),
       "@/utils": path.resolve(__dirname, "./src/utils"),
-      "@/graphql": path.resolve(__dirname, "./src/graphql")
+      "@/graphql": path.resolve(__dirname, "./src/graphql"),
     },
-  },  
+  },
 });

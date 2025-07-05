@@ -29,7 +29,7 @@ const Team = () => {
     <Main className="py-10 xl:py-16 h-full">
       <Container>
         <Title title="Equipe de Trabalho" className="uppercase" />
-        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-primary-300 font-extrabold mb-8">
+        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-sky-400 font-extrabold mb-8">
           Coordenador
         </h2>
         <section
@@ -44,7 +44,7 @@ const Team = () => {
             }
           })}
         </section>
-        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-primary-300 font-extrabold mb-8">
+        <h2 className="text-xl xl:text-3xl text-secondary-600 dark:text-sky-400 font-extrabold mb-8">
           Bolsistas da Equipe de Transcrição
         </h2>
         <section className="grid auto-rows-auto sm:grid-cols-2 lg:grid-cols-3 gap-8">

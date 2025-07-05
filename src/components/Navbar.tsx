@@ -101,10 +101,10 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
                       <Button
                         ref={trigger}
                         className={cn(
-                          "text-white hover:text-amber-300/75 group/submenu uppercase font-semibold",
+                          "text-white hover:text-amber-300 group/submenu uppercase font-semibold",
                           "md:hover:text-secondary-600 p-0 flex items-center gap-0.5",
                           open
-                            ? "md:text-rose-500 dark:md:text-amber-300/75"
+                            ? "md:text-rose-500 dark:md:text-amber-300"
                             : "md:text-primary-600 dark:md:text-white"
                         )}
                         title={subitem.label}
@@ -131,10 +131,10 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
                               <NavLink
                                 className={({ isActive }) => {
                                   return cn(
-                                    "text-sm text-white hover:text-amber-300/75 font-semibold",
+                                    "text-sm text-white hover:text-amber-300 font-semibold",
                                     "md:hover:text-secondary-600 font-semibold uppercase",
                                     isActive
-                                      ? "md:text-rose-500 dark:md:text-amber-300/75"
+                                      ? "md:text-rose-500 dark:md:text-amber-300"
                                       : "md:text-primary-600 dark:md:text-white"
                                   );
                                 }}
@@ -155,10 +155,10 @@ const Navbar = ({ dataItems, children }: NavbarTypes) => {
                       <NavLink
                         className={({ isActive }) => {
                           return cn(
-                            "text-white hover:text-amber-300/75 uppercase font-semibold",
+                            "text-white hover:text-amber-300 uppercase font-semibold",
                             "md:hover:text-secondary-600 transition-colors duration-300",
                             isActive
-                              ? "md:text-rose-500 dark:md:text-amber-300/75"
+                              ? "md:text-rose-500 dark:md:text-amber-300"
                               : "md:text-primary-600 dark:md:text-white"
                           );
                         }}

@@ -30,7 +30,7 @@ const CoordinatorTeam = ({ member }: { member: memberTypes }) => {
         className="rounded-xl aspect-square object-cover md:h-80 lg:col-span-1 max-w-full"
       />
       <div className="relative flex flex-col gap-4 md:max-h-80 md:overflow-y-auto lg:col-span-2 xl:col-span-3">
-        <h2 className="text-xl text-primary-600 dark:text-amber-300/75 font-bold leading-5 xl:leading-6 mt-4 xl:mt-0">
+        <h2 className="text-xl text-primary-600 dark:text-amber-300 font-bold leading-5 xl:leading-6 mt-4 xl:mt-0">
           {member.title}
         </h2>
         <div

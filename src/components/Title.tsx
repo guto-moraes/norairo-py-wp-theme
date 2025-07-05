@@ -30,7 +30,7 @@ const Title = ({
       <hgroup className="max-w-full mx-auto mb-8 xl:mb-16">
         <h1
           className={cn(
-            "text-2xl xl:text-4xl text-primary-700 dark:text-amber-300/75 font-bold mb-8 xl:mb-16",
+            "text-2xl xl:text-4xl text-primary-700 dark:text-amber-300 font-bold mb-8 xl:mb-16",
             className
           )}
         >
@@ -45,7 +45,7 @@ const Title = ({
     return (
       <h1
         className={cn(
-          "text-2xl xl:text-4xl text-primary-700 dark:text-amber-300/75 font-bold mb-8 xl:mb-16",
+          "text-2xl xl:text-4xl text-primary-700 dark:text-amber-300 font-bold mb-8 xl:mb-16",
           className
         )}
       >
@@ -57,7 +57,7 @@ const Title = ({
   return (
     <h1
       className={cn(
-        "text-2xl xl:text-4xl text-primary-700 dark:text-amber-300/75 font-bold mb-8 xl:mb-16",
+        "text-2xl xl:text-4xl text-primary-700 dark:text-amber-300 font-bold mb-8 xl:mb-16",
         className
       )}
     >

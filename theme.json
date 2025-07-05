@@ -1,0 +1,50 @@
+{
+    "settings": {
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Space Grotesk",
+                            "fontOticalSizing": "auto",
+                            "fontWeight": "100 900",
+                            "fontStyle": "normal",
+                            "src": "file:./fonts/SpaceGrotesk-VariableFont_wght.woff2"
+                        }
+                    ],
+                    "fontFamily": "\"Space Grotesk\", Inter, sans-serif",
+                    "name": "Space Grotesk",
+                    "slug": "spacegotesk"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Inter",
+                            "fontOticalSizing": "auto",
+                            "fontWeight": "100 900",
+                            "fontStyle": "normal",
+                            "src": "file:./fonts/Inter-VariableFont_opsz,wght.woff2"
+                        }
+                    ],
+                    "fontFamily": "\"Inter\", sans-serif",
+                    "name": "Inter",
+                    "slug": "inter"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Inter",
+                            "fontOticalSizing": "auto",
+                            "fontWeight": "100 900",
+                            "fontStyle": "italic",
+                            "src": "file:./fonts/Inter-Italic-VariableFont_opsz,wght.woff2"
+                        }
+                    ],
+                    "fontFamily": "\"Inter\", sans-serif",
+                    "name": "Inter Italic",
+                    "slug": "interitalic"
+                }                 
+            ]
+        }
+    }
+}

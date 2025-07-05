@@ -82,6 +82,7 @@ const LettersByCategory = () => {
               className="uppercase"
             />
           )}
+          
           <div className="rounded-xs bg-secondary-200/40 dark:bg-[#1c1e26] shadow-inner p-1.5 mb-5 w-full h-14 flex gap-3">
             <input
               type="search"
@@ -89,10 +90,9 @@ const LettersByCategory = () => {
               placeholder="Digite um termo ou um ano para pesquisar"
               className={cn(
                 "rounded-xs bg-white dark:bg-[#16161c] px-2 w-full h-full focus:outline-2",
-                "outline-rose-500 dark:outline-rose-300 peer text-secondary-700",
+                "outline-rose-500 peer text-secondary-700 focus:outline-priamry-500",
                 "dark:text-secondary-200 placeholder:text-base placeholder:text-secondary-600",
-                "dark:placeholder:text-secondary-200 placeholder:font-medium border-0",
-                "focus:outline-priamry-500"
+                "dark:placeholder:text-secondary-200 placeholder:font-medium border-0"                
               )}
               autoFocus
               ref={search}
@@ -105,8 +105,8 @@ const LettersByCategory = () => {
                 "hover:border-rose-600 peer-focus:outline-2 peer-focus:outline-rose-500",
                 "peer-focus:border-rose-500 focus:outline-2 focus:outline-rose-600 dark:hover:text-white",
                 "font-bold transition-colors duration-300 rounded-xs grid place-content-center dark:text-rose-950",
-                "dark:bg-rose-300 dark:hover:bg-rose-500 dark:border-rose-300 dark:hover:border-rose-500",
-                "dark:peer-focus:outline-rose-300 dark:peer-focus:border-rose-300 dark:focus:outline-rose-500"
+                "dark:bg-rose-500 dark:hover:bg-rose-500 dark:border-rose-500 dark:hover:border-rose-500",
+                "dark:peer-focus:outline-rose-500 dark:peer-focus:border-rose-500 dark:focus:outline-rose-500"
               )}
               onClick={handleSubmitSearchQuery}
             >

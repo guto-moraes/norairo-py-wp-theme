@@ -99,6 +99,14 @@ function norairo__theme()
 		wp_get_theme()->get('Version'), //time()
 		true
 	);
+
+	wp_enqueue_style(
+		"norairo-theme",
+		get_stylesheet_uri(),
+		wp_get_theme()->get('Version'), //time()
+		true
+	);
+
 }
 add_action('wp_enqueue_scripts', 'norairo__theme');
 

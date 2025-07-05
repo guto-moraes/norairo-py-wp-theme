@@ -12,7 +12,7 @@ const Article = ({ content }: { content: string }) => {
         "prose-figcaption:bottom-0 prose-figcaption:left-0 prose-figure:relative prose-h2:text-primary-700",
         "prose-strong:text-secondary-800 [&_p.note]:pt-2.5 [&_p.note]:border-t dark:marker:text-white",
         "[&_p.note]:border-secondary-300 max-lg:prose-h2:text-left [&_img]:max-w-full",
-        "dark:prose-a:text-sky-400 dark:prose-h2:text-primary-300 dark:prose-strong:text-primary-300",
+        "dark:prose-a:text-sky-400 dark:prose-h2:text-amber-300 dark:prose-strong:text-amber-300",
 
       )}
       dangerouslySetInnerHTML={{ __html: content }}

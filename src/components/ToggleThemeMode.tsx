@@ -26,7 +26,7 @@ const ToggleThemeMode = () => {
         }
       >
         {theme === "dark" ? (
-          <Icons.Sun className="size-4 fill-yellow-400" />
+          <Icons.Sun className="size-4 fill-amber-300" />
         ) : (
           <Icons.Moon className="size-4 fill-white" />
         )}

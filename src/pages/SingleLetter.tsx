@@ -40,7 +40,7 @@ const SingleLetter = () => {
                       url={data.oficio.categories.nodes[0].link}
                       title="Ver todos os arquivos da categoria Comando de Esquadra"
                       label={data.oficio.categories.nodes[0].name}
-                      className="tracking-wide uppercase dark:text-amber-300/75"
+                      className="tracking-wide uppercase dark:text-amber-300"
                     />
                   </Sidebar.ListItem>
                   <Sidebar.ListItem

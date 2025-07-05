@@ -11,3 +11,13 @@ License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: norairo-py
 */
+
+
+body {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  background-color: #f5f7fa;
+}
+
+body.dark {
+  background-color: #16161c;
+}

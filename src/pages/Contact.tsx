@@ -106,10 +106,9 @@ const Contact = () => {
             )}
             <div 
               className={cn(
-                "[&_h2]:text-xl [&_h2]:lg:text-2xl [&_h2]:xl:text-3xl [&_h2]:text-primary-600 [&_h2]:dark:text-primary-300",
-                "[&_h2]:font-black [&_p]:text-secondary-800 [&_p]:dark:text-white [&_p]:text-justify [&_p]:hyphens-auto",
-                "[&_p>strong]:text-primary-700 [&_p>strong]:dark:text-amber-300/75",
-                "flex flex-col justify-center gap-8 sm:my-auto lg:my-0"
+                "[&_h2]:text-xl [&_h2]:lg:text-2xl [&_h2]:xl:text-3xl [&_h2]:text-primary-600 [&_h2]:dark:text-sky-400",
+                "[&_h2]:font-bold [&_p]:text-secondary-800 dark:[&_p]:text-white/85 [&_p>strong]:text-primary-700",
+                "[&_p>strong]:dark:text-amber-300 flex flex-col justify-center gap-8 sm:my-auto lg:my-0"
               )}
               dangerouslySetInnerHTML={{ __html: data?.norairoTheme.norairoThemeSettings.contactText || "" }} 
             />
@@ -132,9 +131,9 @@ const Contact = () => {
                 aria-invalid={errors.fullName ? "true" : "false"}
                 defaultValue="Selecione um opção"
                 className={cn(
-                  "shadow-md rounded-sm bg-white/85 dark:bg-[#1c1e26] p-2 focus:outline-2",
-                  "focus:outline-primary-500 dark:focus:outline-amber-300/75 dark:text-white/75",
-                  "aria-[invalid]:focus:outline-rose-500 border border-gray-200"
+                  "shadow-md rounded-sm bg-white/85 dark:bg-[#1c1e26] p-2 focus:outline-2  border border-gray-200",
+                  "focus:outline-primary-500 dark:focus:outline-amber-300 dark:text-white/75",
+                  "aria-[invalid]:focus:outline-rose-500 dark:aria-[invalid]:focus:outline-lime-400"
                 )}
                 {...register("subject")}
               >
@@ -160,9 +159,9 @@ const Contact = () => {
                 title="Informe seu nome"
                 aria-invalid={errors.fullName ? "true" : "false"}
                 className={cn(
-                  "shadow-md rounded-sm bg-white/85 dark:bg-[#1c1e26] p-2 focus:outline-2",
-                  "focus:outline-primary-500 dark:focus:outline-amber-300/75 dark:text-white/75",
-                  "aria-[invalid]:focus:outline-rose-500 border border-gray-200"
+                  "shadow-md rounded-sm bg-white/85 dark:bg-[#1c1e26] p-2 focus:outline-2  border border-gray-200",
+                  "focus:outline-primary-500 dark:focus:outline-amber-300 dark:text-white/75",
+                  "aria-[invalid]:focus:outline-rose-500 dark:aria-[invalid]:focus:outline-lime-400"
                 )}
                 {...register("fullName")}
               />
@@ -182,9 +181,9 @@ const Contact = () => {
                 title="informe seu e-mail"
                 aria-invalid={errors.email ? "true" : "false"}
                 className={cn(
-                  "shadow-md rounded-sm bg-white/85 dark:bg-[#1c1e26] p-2 focus:outline-2",
-                  "focus:outline-primary-500 dark:focus:outline-amber-300/75 dark:text-white/75",
-                  "aria-[invalid]:focus:outline-rose-500 border border-gray-200"
+                  "shadow-md rounded-sm bg-white/85 dark:bg-[#1c1e26] p-2 focus:outline-2 border border-gray-200",
+                  "focus:outline-primary-500 dark:focus:outline-amber-300 dark:text-white/75",
+                  "aria-[invalid]:focus:outline-rose-500 dark:aria-[invalid]:focus:outline-lime-400"
                 )}
                 {...register("email")}
               />
@@ -204,8 +203,8 @@ const Contact = () => {
                 aria-invalid={errors.userMessage ? "true" : "false"}
                 className={cn(
                   "resize-none shadow-md rounded-sm bg-white/70 dark:bg-[#1c1e26] p-2 h-48 dark:text-white/75",
-                  "focus:outline-2 focus:outline-primary-500 dark:focus:outline-amber-300/75",
-                  "aria-[invalid]:focus:outline-rose-500 border border-gray-200"
+                  "focus:outline-2 focus:outline-primary-500 dark:focus:outline-amber-300 border border-gray-200",
+                  "aria-[invalid]:focus:outline-rose-500 dark:aria-[invalid]:focus:outline-lime-400"
                 )}
                 {...register("userMessage")}
               />
@@ -223,7 +222,7 @@ const Contact = () => {
                 "uppercase dark:hover:text-white/75 dark:hover:bg-primary-500 transition-colors duration-300",
                 isSubmitting
                   ? "bg-amber-300  text-stone-900"
-                  : "bg-primary-700 dark:bg-amber-300/75 text-white dark:text-slate-950"
+                  : "bg-primary-700 dark:bg-amber-300 text-white dark:text-slate-950"
               )}
             >
               {isSubmitting ? "Enviando mensagem" : "Enviar Mensagem"}
