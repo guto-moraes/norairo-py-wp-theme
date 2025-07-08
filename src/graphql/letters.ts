@@ -65,6 +65,7 @@ export const SINGLE_LETTER = gql`
       }
       date
       details {
+        boxStorage
         briefDescription
         originalFileAuthor
         originalfilecreatedat

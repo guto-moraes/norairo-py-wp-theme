@@ -51,7 +51,9 @@ const Letters = () => {
   const handleSubmitSearchQuery = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const query = search?.current?.value;
-    if (query) navigate(`?s=${query}`);
+    if (query) {
+        navigate(`?s=${query}`)
+    }
   };
 
   const handlePagination = (page: number) => {

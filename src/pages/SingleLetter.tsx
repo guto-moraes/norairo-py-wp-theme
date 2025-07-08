@@ -7,11 +7,11 @@ import Errors from "@/components/Errors";
 import { useSingleLetter } from "@/queries/letters";
 import * as Sidebar from "@/components/SingleLetterSidebar";
 import formatFileSize from "@/utils/formatFileSize";
-import { brazilianFormatDate, dateTodayAbntFormat } from "@/utils/formatDate";
+import { brazilianFormatDate } from "@/utils/formatDate";
 import TranscriberPhoto from "@/components/TranscriberPhoto";
-import { formatAbntName } from "@/utils/formatAbntName";
 import ClipboardArea from "@/components/ClipboardArea";
 import PDFDocument from "@/components/PDFDocument";
+import ABNTCitation from "@/components/ABNTCitation";
 
 const SingleLetter = () => {
   const { slug = "" } = useParams();
@@ -89,11 +89,13 @@ const SingleLetter = () => {
                 </Sidebar.BoxText>
                 <Sidebar.Title title="Como citar - ABNT" />
                 <ClipboardArea>
-                  {formatAbntName(data.oficio.details.originalFileAuthor)}.{" "}
-                  <strong>{data.oficio.title}</strong>.{" "}
-                  {data.oficio.details.originalfilecreatedat}. Disponível em:{" "}
-                  {data.oficio.details.transcriptionFileLink.node.guid}. Acesso
-                  em: {dateTodayAbntFormat()}.
+                  <ABNTCitation 
+                    author={data.oficio.details.originalFileAuthor}
+                    title={data.oficio.title}
+                    box={data.oficio.details.boxStorage}
+                    documentCreatedAt={data.oficio.details.originalfilecreatedat}
+                    url={data.oficio.details.transcriptionFileLink.node.guid}
+                  />
                 </ClipboardArea>
               </aside>
               <div className="bg-secondary-100/75 dark:bg-[#1c1e26] p-4 rounded-md md:col-span-8 xl:col-span-9">

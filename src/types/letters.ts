@@ -80,6 +80,7 @@ export type singleLetterTypes = {
   };
   date: string;
   details: {
+    boxStorage: string;
     briefDescription: string;
     originalFileAuthor: string;
     originalfilecreatedat: string;
