@@ -11,7 +11,7 @@ const Page = () => {
   const { pathname } = useLocation();
   const path = pathname.split("/")[1];
   const { slug = "" } = useParams();
-  const id = `/${path}/${slug}/`
+  const id = path ? `/${path}/${slug}/` : slug;
 
   const { data, isLoading, isError, error } = useQueryPage(id);
 
