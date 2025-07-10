@@ -13,7 +13,7 @@ import cn from "@/utils/cn";
 
 const MAX_ITEMS = 5;
 const MAX_LEFT = (MAX_ITEMS - 1) / 2;
-const LIMIT = 1; // Number of posts to fetch per request
+const LIMIT = 10; // Number of posts to fetch per request
 
 const Blog = () => {
   const [offset, setOffset] = useQueryState("offset");
